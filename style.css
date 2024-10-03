@@ -146,17 +146,18 @@ body {
       border-radius: 5px;
       width: 30px;
       height: 30px;
-      line-height: 30px;
+      line-height: 25px;
       font-weight: bold;
       text-align: center;
       user-select: none;
+      margin-bottom: 20px;
     }
 
 
     .nav-toggle {
       display: block;
       position: absolute;
-      left: 5px;
+      left: 40px;
       top: 160px;
     }
 
@@ -172,9 +173,10 @@ body {
       margin: 0;
       padding: 10px;
       list-style: none;
-      border-bottom: 1px solid rgb(133, 45, 45);
+      border-bottom: 2px solid rgb(133, 45, 45);
       color: black;
       text-decoration: none;
+      border-radius: 5px;
       
     }
     
@@ -184,5 +186,9 @@ body {
     input {
       display: none;
      }
+
+
+
+
 
   }
