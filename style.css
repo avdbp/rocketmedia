@@ -244,7 +244,133 @@ body {
  }
 
 
+  /* --------SECTION2------------- */
 
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10; /* Asegura que las flechas estén por encima de otros elementos */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+ .mySlides img {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.222);
+ }
+
+ .section-2 {
+  display: flex;
+  margin-top: 50px;
+ }
+
+ .section-2-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; /* Asegura que el carrusel no desborde */
+}
+
+ .section-2-title {
+   color: black;
+   font-size: 80px;
+   font-weight: 300;
+   width: 25%;
+   margin-left: 10%;
+   margin-right: 5%;
+ }
+
+ .bold-red-title {
+  color:#C51D15;
+  font-weight: 900;
+ }
+
+
+
+
+
+ 
 
 
 
@@ -345,6 +471,10 @@ body {
  }
 
 
+
+        /* --------SECTION2------------- */
+
+ .prev, .next,.text {font-size: 11px}
 
 
   }
