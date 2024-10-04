@@ -310,5 +310,39 @@ body {
 
 
 
+       /* --------SECTION1------------- */
+
+
+.section-1 {
+  background-position: top 500px left 10px;
+}
+
+ .description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+ }
+
+ .cv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-right: 20px;
+ }
+
+ .cvdaniela {
+  margin-left: 0;
+ }
+
+
+ .cv img {
+  margin-left: 5%;
+  margin-bottom: 10px;
+ }
+
+
+
 
   }
