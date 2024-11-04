@@ -9,7 +9,7 @@
 <body>
 
     <header class="header">
-
+      <div class="container-elements-header">
         <img class="logo-rm" src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png" alt="">
 
         <nav class="nav">
@@ -48,12 +48,16 @@
               <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727982252/rocketMedia/mail_r2mtts.png" alt="icon Mail">
             </a>
           </div>
+      </div>
+
+       
           
 
     </header>
    
 
     <section class="section-1">
+      <div class="container-section-1-elements"></div>
 
       <h1 class="home-title roboto-light" >Get To Know Your Team <span class="roboto-black" >Rocket Media</span></h1>
       <div class="description-container">
@@ -81,46 +85,75 @@
     </section>
 
     <section class="section-2">
-      <h2 class="section-2-title">Take your 
-        <span class="bold-red-title">Business Brand</span> or <span class="bold-red-title"> Product </span>to new heights!
-      </h2>
+      <div class="section-2-container-elements">
+        <h2 class="section-2-title">Take your 
+          <span class="bold-red-title">Business Brand</span> or <span class="bold-red-title"> Product </span>to new heights!
+        </h2>
+        
+        <div class="section-2-container">
+          <div class="carrousel">
+
+            <div class="mySlides fade">
+              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1728071275/rocketMedia/sskWeb_ivkdc8.png" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1728071275/rocketMedia/restoMainWeb_ernxeg.png" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+          </div>
       
-      <div class="section-2-container">
-        <div class="carrousel">
-          <div class="mySlides fade">
-            <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1728071275/rocketMedia/sskWeb_ivkdc8.png" style="width:100%">
-          </div>
+          <!-- Carrusel ahora está antes del párrafo -->
           
-          <div class="mySlides fade">
-            <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1728071275/rocketMedia/restoMainWeb_ernxeg.png" style="width:100%">
-          </div>
           
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
+          <p class="section-2-text">
+            As your dedicated Graphic Design, Digital Marketing, and Web Design partners, we specialize in crafting compelling corporate identities and executing targeted social media campaigns. We tailor our services to meet your unique needs and budget, offering a comprehensive range of solutions, from logo design and website development to full-scale online advertising.
+          </p>
+          <br>
+          
+          <p class="sub-text">Looking for something specific?</p>
+          <div class="section-2-buttons">
+              <a class="button-menu" href="#">Graphic Design</a>
+              <a class="button-menu" href="#">UX/UI Design</a>
+              <a class="button-menu" href="#">Web Design</a>
+              <a class="button-menu" href="#">Marketing & Social Media</a>
+              <a class="button-menu" href="#">Web Development</a>
+              <a class="button-menu" href="#">App Development</a>
+          </div>
         </div>
-        
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-        </div>
-    
-        <!-- Carrusel ahora está antes del párrafo -->
-        <p class="section-2-text">
-          As your dedicated Graphic Design, Digital Marketing, and Web Design partners, we specialize in crafting compelling corporate identities and executing targeted social media campaigns. We tailor our services to meet your unique needs and budget, offering a comprehensive range of solutions, from logo design and website development to full-scale online advertising.
-        </p>
-        <br>
-        
-        <p sub-text>Looking for something specific?</p>
-        <div class="section-2-buttons"></div>
       </div>
+      
     </section>
     
 
 
   
 
-    <footer>
-
+    <footer class="footer">
+      <div class="rrss-footer">
+        <a class="icon" href="#" target="_blank">
+          <img src="./assets/ig_white.png" alt="icon Instagram">
+        </a>
+      
+        <a class="icon" href="#" target="_blank">
+          <img src="/assets/ws_white.png" alt="icon WhatsApp">
+        </a>
+      
+        <a class="icon" href="#" target="_blank">
+          <img src="/assets/in_white.png" alt="icon Linkedin">
+        </a>
+      
+        <a class="icon" href="#" target="_blank">
+          <img src="/assets/mail_white.png" alt="icon Mail">
+        </a>
+      </div>
     </footer>
     <script>
       let slideIndex = 1;

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Media</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header class="header">
+      <div class="container-elements-header">
+        <img class="logo-rm" src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png" alt="">
+
+        <nav class="nav">
+            <a class="menu current" href="#">Home</a>
+            <a class="menu cool-link" href="#">Graphic Design</a>
+            <a class="menu cool-link" href="#">UX/UI Design</a>
+            <a class="menu cool-link" href="#">Web & App Development</a>
+            <a class="menu cool-link" href="#">Contact Us</a>
+        </nav>
+
+
+        <nav class="nav-toggle">
+          <input type="checkbox" id="menu">
+          <label class="label-menu" for="menu">☰</label>
+          <a class="" href="#">Home</a>
+          <a class="" href="#">Graphic Design</a>
+          <a class="" href="#">UX/UI Design</a>
+          <a class="" href="#">Web & App Development</a>
+          <a class="" href="#">Contact Us</a>
+      </nav>
+
+        <div class="rrss">
+            <a class="icon" href="#" target="_blank">
+              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727982251/rocketMedia/ig_d1kpyp.png" alt="icon Instagram">
+            </a>
+          
+            <a class="icon" href="#" target="_blank">
+              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727982252/rocketMedia/ws_kotxel.png" alt="icon WhatsApp">
+            </a>
+          
+            <a class="icon" href="#" target="_blank">
+              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727982252/rocketMedia/in_qgqoxu.png" alt="icon Linkedin">
+            </a>
+          
+            <a class="icon" href="#" target="_blank">
+              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727982252/rocketMedia/mail_r2mtts.png" alt="icon Mail">
+            </a>
+          </div>
+      </div>
+
+       
+          
+
+    </header>
+   
+
+    
+  
+
+    <footer>
+
+    </footer>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+    
+</body>
