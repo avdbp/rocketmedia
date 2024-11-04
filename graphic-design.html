@@ -13,8 +13,8 @@
         <img class="logo-rm" src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png" alt="">
 
         <nav class="nav">
-            <a class="menu current" href="#">Home</a>
-            <a class="menu cool-link" href="#">Graphic Design</a>
+            <a class="menu cool-link" href="index.html">Home</a>
+            <a class="menu current" href="#">Graphic Design</a>
             <a class="menu cool-link" href="#">UX/UI Design</a>
             <a class="menu cool-link" href="#">Web & App Development</a>
             <a class="menu cool-link" href="#">Contact Us</a>
@@ -55,40 +55,27 @@
 
     </header>
    
-
-    
   
 
-    <footer>
-
+    <footer class="footer">
+      <div class="rrss-footer">
+        <a class="icon" href="#" target="_blank">
+          <img src="./assets/ig_white.png" alt="icon Instagram">
+        </a>
+      
+        <a class="icon" href="#" target="_blank">
+          <img src="/assets/ws_white.png" alt="icon WhatsApp">
+        </a>
+      
+        <a class="icon" href="#" target="_blank">
+          <img src="/assets/in_white.png" alt="icon Linkedin">
+        </a>
+      
+        <a class="icon" href="#" target="_blank">
+          <img src="/assets/mail_white.png" alt="icon Mail">
+        </a>
+      </div>
     </footer>
-    <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
-      
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-      
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-      
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-      }
-      </script>
+    
     
 </body>
