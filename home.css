@@ -1,0 +1,320 @@
+
+  /* --------SECTION1------------- */
+
+
+
+  .section-1 {
+    
+    margin: 0 auto;
+    background-color: #C51D15;
+    background-image: url(https://res.cloudinary.com/dqph2qm49/image/upload/v1727986170/rocketMedia/rocketWhite2_iqbuie.png);
+    background-repeat: no-repeat;
+    background-position: bottom -190px right 100px;
+    background-size: 1000px;
+    background-image: cover;
+    padding-top: .1px;
+    padding-bottom: 150px;
+    
+    
+  }
+
+  .container-section-1-elements {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding-top: .1px;
+
+  }
+
+  .home-title {
+    
+    margin: 100px auto;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    padding-left: 1%;
+  }
+
+ .description-container {
+  margin: 0 auto;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  padding: 0 135px;
+  
+ }
+
+ .cv {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+ }
+
+ .cv img {
+  width: 30%;
+ }
+ 
+ 
+ .description-text {
+  padding: 0 5px 0 25px;
+ }
+ .cvdaniela {
+  margin-left: 50px;
+ }
+
+ .profession {
+  width: 50%;
+  text-align: left;
+  margin: 10px 0px;
+  
+ }
+
+
+  /* --------SECTION2------------- */
+
+
+
+.section-2 {
+  max-width: 1600px;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+ .mySlides img {
+
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.222);
+ }
+
+ .section-2-container-elements {
+  margin: 50px auto;
+  max-width: 1600px;
+  display: flex;
+  align-items:center;
+ }
+
+
+.section-2-title {
+  font-size: 80px;
+  font-weight: 300;
+  margin-bottom: 20px; 
+  margin-left: 10%;
+}
+
+.bold-red-title {
+  color:#C51D15;
+  font-weight: 900;
+ }
+
+
+ .section-2-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left; 
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.carrousel {
+  position: relative; /* Asegura que las flechas se posicionen dentro del carrusel */
+  margin-bottom: 20px; /* Espacio entre el carrusel y el párrafo */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background-color: rgba(183, 177, 177, 0.355);
+  z-index: 10; /* Asegura que las flechas estén por encima de otros elementos */
+  
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.prev {
+  left: 10px;
+  border-radius: 25px;
+}
+
+.next {
+  right: 10px;
+  border-radius: 25px;
+}
+
+.section-2-text {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 20px; 
+}
+
+.sub-text {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+ .button-menu {
+    background-color:#C51D15;
+    padding: 6px 8px;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.332);
+    font-size: 10px;
+ }
+
+ .section-2-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+ }
+
+ .section-2-buttons a {
+  text-decoration: none;
+ }
+
+
+
+
+
+  @media (max-width: 450px){
+
+
+
+   
+
+       /* --------SECTION1------------- */
+
+
+.section-1 {
+  height: 1650px;
+  background-position: top 500px left 10px;
+ 
+}
+
+.home-title {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 100px;
+}
+
+ .description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  
+ }
+
+ .profession {
+   text-align: left;
+   margin: 10px 0px;
+ }
+
+
+ .cv {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-right: 20px;
+ }
+
+ .cvdaniela {
+  margin-left: 0;
+ }
+
+
+ .cv img {
+  margin-left: 5%;
+  margin-bottom: 10px;
+ }
+
+
+
+        /* --------SECTION2------------- */
+
+ .prev, .next,.text {
+  font-size: 11px
+}
+
+
+.section-2-container-elements {
+
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+ }
+
+ .carrousel {
+  margin: 10%;
+ }
+
+ .section-2-text {
+  margin: 10%;
+
+ }
+
+ .section-2-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+ }
+
+ .button-menu {
+   width: 100%;
+   font-size: 20px;
+
+ }  
+
+ .sub-text {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+  }
+
