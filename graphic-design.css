@@ -10,6 +10,11 @@
  
  .brand-container {
     width: 25%;
+    margin-left: 5%;
+ }
+
+ .brand-imgs {
+   margin-right: 4%;
  }
 
  .brand-text-title {
