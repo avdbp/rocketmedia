@@ -6,7 +6,6 @@
    max-width: 1400px;
    display: flex;
    padding: 0.1px;
-   margin-bottom: 100px;
  }
  
  .brand-container {
@@ -81,9 +80,7 @@
    margin-right: 5%;
   }
 
-  .img-container img {
-   margin-bottom: 50px;
-  }
+ 
 
 
   .section-3 {
@@ -93,3 +90,8 @@
     padding: 0.1px;
     margin-bottom: 100px;
   }
+
+
+.img-bottom {
+   margin-bottom: 150px;
+}
