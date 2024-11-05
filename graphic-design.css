@@ -6,6 +6,7 @@
    max-width: 1400px;
    display: flex;
    padding: 0.1px;
+   margin-bottom: 100px;
  }
  
  .brand-container {
@@ -52,7 +53,43 @@
  }
 
  .imgs-bottom img {
-   width: 98%;
+   width: 99%;
+   margin-top: 30px;
+ }
+
+ .imgs-bottom h4 {
    margin-left: 1%;
    margin-top: 100px;
  }
+
+ .section-2 {
+   margin-top: 100px;
+    max-width: 1400px;
+    display: flex;
+    padding: 0.1px;
+  }
+
+  .brand-logo img {
+   width: 150px;
+  }
+
+  .brand-images img {
+    width: 930px;
+    
+  }
+  .brand-images {
+   margin-right: 5%;
+  }
+
+  .img-container img {
+   margin-bottom: 50px;
+  }
+
+
+  .section-3 {
+   margin-top: 100px;
+    max-width: 1400px;
+    display: flex;
+    padding: 0.1px;
+    margin-bottom: 100px;
+  }
