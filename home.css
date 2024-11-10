@@ -216,7 +216,8 @@
 
 
  /* Estilos del lightbox */
-#lightbox {
+#lightbox  {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -228,6 +229,8 @@
   align-items: center;
   z-index: 9999;
 }
+
+
 
 #lightbox-img {
   max-width: 90%;
@@ -254,6 +257,12 @@
   box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.232);
 
 }
+
+
+.desapacere {
+  display: none;
+}
+
 
 
 
@@ -369,6 +378,11 @@
   align-items: center;
   z-index: 9999;
 }
+
+.desapacere {
+  display: block;
+}
+
 
 #lightbox-img {
   max-width: 90%;
