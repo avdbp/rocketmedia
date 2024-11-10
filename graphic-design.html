@@ -34,7 +34,7 @@
 
         <div class="rrss">
             <a class="icon" href="#" target="_blank">
-              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727982251/rocketMedia/ig_d1kpyp.png" alt="icon Instagram">
+              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727982251/rocketMedia/ig_d1kpyp.png" alt="icon Instagram" >
             </a>
           
             <a class="icon" href="#" target="_blank">
@@ -79,22 +79,25 @@
         
         <div class="img-container">
           <h4 >Newsletters Mails Headers</h4>
-          <img class="img" src="https://res.cloudinary.com/dqph2qm49/image/upload/v1730769193/rocketMedia/Newsletter-Folionet_jsqfjq.svg" alt="News Letter Image">
+          <img class="img" src="https://res.cloudinary.com/dqph2qm49/image/upload/v1730769193/rocketMedia/Newsletter-Folionet_jsqfjq.svg" alt="News Letter Image" onclick="openLightbox(this)">
         </div>
         
         <div class="img-container">
           <h4 >Social Media Post</h4>
-          <img class="img" src="https://res.cloudinary.com/dqph2qm49/image/upload/v1730769191/rocketMedia/Social-Media-Folionet_qnw6xe.svg" alt="Social Media Post Image">
+          <img class="img" src="https://res.cloudinary.com/dqph2qm49/image/upload/v1730769191/rocketMedia/Social-Media-Folionet_qnw6xe.svg" alt="Social Media Post Image" onclick="openLightbox(this)">
         </div>
         
       </div>
       
       <div class="imgs-bottom img-container">
         <h4 >App Store & Play Store Images Design</h4>
-        <img class="img-bottom" src="https://res.cloudinary.com/dqph2qm49/image/upload/v1730769192/rocketMedia/AppStoreFOLIONET_e4lp3b.svg" alt="app stores image">
+        <img class="img-bottom" src="https://res.cloudinary.com/dqph2qm49/image/upload/v1730769192/rocketMedia/AppStoreFOLIONET_e4lp3b.svg" onclick="openLightbox(this)" alt="app stores image">
       </div>
     </div>
-
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
     </section>
 
   </div>
@@ -122,17 +125,17 @@
         
         <div class="img-container">
           <h4>Advertising Flyers</h4>
-          <img class="img" src="./assets/flyers9Sentits.png" alt="News Letter Image">
+          <img class="img" src="./assets/flyers9Sentits.png" alt="News Letter Image" onclick="openLightbox(this)">
         </div>
         
         <div class="img-container">
           <h4>Corporate Stationery</h4>
-          <img class="img" src="./assets/CorporateStationery9Sentits.png" alt="Social Media Post Image">
+          <img class="img" src="./assets/CorporateStationery9Sentits.png" alt="Social Media Post Image" onclick="openLightbox(this)">
         </div>
 
         <div class="img-container">
           <h4>Social Media Posts</h4>
-          <img class="img img-bottom" src="./assets/SocialMediaPost9Sentits.png" alt="app stores image">
+          <img class="img img-bottom" src="./assets/SocialMediaPost9Sentits.png" alt="app stores image" onclick="openLightbox(this)">
         </div>
 
       </div>
@@ -171,7 +174,7 @@
         
         <div class="img-container">
           <h4>Brochure</h4>
-          <img class="img img-bottom" src="./assets/etb24.png" alt="News Letter Image">
+          <img class="img img-bottom" src="./assets/etb24.png" alt="News Letter Image" onclick="openLightbox(this)">
         </div>
         
 
@@ -214,5 +217,21 @@
       </div>
     </footer>
     
+    <script>
+function openLightbox(img) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+    
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    }
+    
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+    
+    </script>
+    
+
     
 </body>

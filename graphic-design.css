@@ -95,3 +95,164 @@
 .img-bottom {
    margin-bottom: 150px;
 }
+
+/* Estilo del lightbox */
+.lightbox {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Efecto de zoom al 200% para la imagen del lightbox */
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  transition: transform 0.3s ease; /* Suavizado del efecto */
+  transform: scale(2); /* Aumenta la imagen al 200% */
+}
+
+.lightbox-content:hover {
+  transform: scale(2.1); /* Aumenta la imagen al 200% */
+}
+
+/* Botón de cierre */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 450px){
+body {
+  max-width: 100%;
+}
+  .section-1 {
+    text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-items: center;
+     align-items: center;
+     margin: 50px auto;
+     width: 100%;
+     padding: 0.1px;
+   }
+
+
+   .brand-container {
+    width: 90%;
+ }
+
+
+ .brand-text {
+  text-align: left;
+  margin:10px;
+  width: 98%;
+  font-size: 17px;
+  line-height: 1.3;
+}
+
+.imgs-top {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  padding-right: 20px;
+}
+.img-container {
+  margin-top: 30px;
+}
+
+
+.imgs-top img {
+width: 100%;
+margin: 5%;
+}
+
+
+
+ .brand-images img {
+   width: 100%;
+   
+ }
+ .brand-images {
+  margin-right: 5%;
+ }
+
+.imgs-bottom h4 {
+  margin-top: 0px;
+}
+
+.img-bottom {
+  margin-bottom: 0px;
+}
+
+
+
+.section-2 {
+  text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-items: center;
+     align-items: center;
+     margin: 50px auto;
+     width: 100%;
+     padding: 0.1px;
+ }
+
+ .brand-logo img {
+  width: 150px;
+ }
+
+ .brand-images img {
+   width:100%;
+   
+ }
+ .brand-images {
+  margin-right: 5%;
+  margin: 5%;
+ }
+
+
+ .section-3 {
+  text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-items: center;
+     align-items: center;
+     margin: 50px auto;
+     width: 100%;
+     padding: 0.1px;
+ }
+
+
+.img-bottom {
+  margin-bottom: 10px;
+}
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  transition: transform 0.3s ease; /* Suavizado del efecto */
+  transform: scale(1); /* Aumenta la imagen al 200% */
+}
+
+.lightbox-content:hover {
+  transform: scale(1.1); /* Aumenta la imagen al 200% */
+}
+
+}

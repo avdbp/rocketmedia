@@ -95,11 +95,19 @@
           <div class="carrousel">
 
             <div class="mySlides fade">
-              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1728071275/rocketMedia/sskWeb_ivkdc8.png" style="width:100%">
+              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1728071275/rocketMedia/sskWeb_ivkdc8.png" style="width:100%" onclick="openLightbox(this)">
             </div>
             
             <div class="mySlides fade">
-              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1728071275/rocketMedia/restoMainWeb_ernxeg.png" style="width:100%">
+              <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1728071275/rocketMedia/restoMainWeb_ernxeg.png" style="width:100%" onclick="openLightbox(this)">
+            </div>
+
+
+            <div id="lightbox" class="lightbox " onclick="closeLightbox()">
+              <span class="close">&times;</span>
+              <img class="lightbox-content" id="lightbox-img">
+              <a class="close-lightbox">X</a>
+              
             </div>
             
             <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -156,33 +164,56 @@
         </a>
       </div>
     </footer>
+
+
     <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
-      
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-      
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-      
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-      }
+
+
+      function openLightbox(img) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+          
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+          }
+          
+          
+          function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+          }
       </script>
+   
+   <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+
+
+    </script>
+
+
     
 </body>
