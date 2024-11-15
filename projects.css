@@ -45,3 +45,22 @@
 .h1-section-1-temp {
     margin: 0px;
   }
+
+ 
+
+.gh-projects {
+    display: flex;
+    text-align: center; /* Centra el texto y el ícono dentro del contenedor */
+    margin-bottom: 50px;
+}
+
+.gh-projects a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Asegura que el color del enlace no cambie */
+}
+
+.gh {
+    width: 50px; /* Ajusta el tamaño del ícono si es necesario */
+    height: auto;
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+}
