@@ -1,0 +1,47 @@
+.section-projects {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    max-width: 1444px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a varias filas */
+}
+
+.project {
+    flex: 1 1 300px; /* Hace que cada proyecto ocupe al menos 300px */
+    margin: 50px; /* Espaciado entre proyectos */
+    text-align: center; /* Alineación centrada del texto y la imagen */
+}
+
+.project img {
+    width: 300px; /* Hace que las imágenes ocupen todo el ancho del contenedor */
+    height: 150px; /* Establece una altura constante para todas las imágenes */
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.332);
+    object-fit: cover; /* Ajusta las imágenes para que llenen el contenedor sin distorsionarse */
+    object-position: top; /* Alinea la imagen hacia la parte superior */
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.project a {
+    background-color: #C51D15;
+    padding: 15px 25px;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.332);
+}
+
+.project a:hover {
+    background-color: #a50f07;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+}
+
+.h1-section-1-temp {
+    margin: 0px;
+  }
