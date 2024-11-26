@@ -1,4 +1,9 @@
-
+.section-form {
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f4f4;
+}
 .contact-section {
     padding: 50px 20px;
     background-color: #f9f9f9;
