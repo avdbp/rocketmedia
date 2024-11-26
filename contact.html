@@ -8,9 +8,53 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+   
     <header class="header">
-        <!-- Resto de tu header aquí -->
-    </header>
+        <div class="container-elements-header">
+          <img class="logo-rm" src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png" alt="">
+  
+          <nav class="nav">
+              <a class="menu cool-link" href="index.html">Home</a>
+              <a class="menu cool-link" href="graphic-design.html">Graphic Design</a>
+              <a class="menu cool-link" href="ux-ui.html">UX/UI Design</a>
+              <a class="menu current" href="#">Web & App Development</a>
+              <a class="menu cool-link" href="contact.html">Contact Us</a>
+          </nav>
+  
+  
+          <nav class="nav-toggle">
+            <input type="checkbox" id="menu">
+            <label class="label-menu" for="menu">☰</label>
+            <a class="" href="index.html">Home</a>
+            <a class="" href="graphic-design.html">Graphic Design</a>
+            <a class="" href="ux-ui.html">UX/UI Design</a>
+            <a class="current-toggle" href="#">Web & App Development</a>
+            <a class="" href="contact.html">Contact Us</a>
+        </nav>
+  
+          <div class="rrss">
+              <a class="icon" href="#" target="_blank">
+                <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727982251/rocketMedia/ig_d1kpyp.png" alt="icon Instagram">
+              </a>
+            
+              <a class="icon" href="#" target="_blank">
+                <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727982252/rocketMedia/ws_kotxel.png" alt="icon WhatsApp">
+              </a>
+            
+              <a class="icon" href="#" target="_blank">
+                <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727982252/rocketMedia/in_qgqoxu.png" alt="icon Linkedin">
+              </a>
+            
+              <a class="icon" href="#" target="_blank">
+                <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727982252/rocketMedia/mail_r2mtts.png" alt="icon Mail">
+              </a>
+            </div>
+        </div>
+  
+         
+            
+  
+      </header>
 
     <main>
         <section class="contact-section">
@@ -41,8 +85,24 @@
     </main>
 
     <footer class="footer">
-        <!-- Resto de tu footer aquí -->
-    </footer>
+        <div class="rrss-footer">
+          <a class="icon" href="#" target="_blank">
+            <img src="./assets/ig_white.png" alt="icon Instagram">
+          </a>
+        
+          <a class="icon" href="#" target="_blank">
+            <img src="/assets/ws_white.png" alt="icon WhatsApp">
+          </a>
+        
+          <a class="icon" href="#" target="_blank">
+            <img src="/assets/in_white.png" alt="icon Linkedin">
+          </a>
+        
+          <a class="icon" href="#" target="_blank">
+            <img src="/assets/mail_white.png" alt="icon Mail">
+          </a>
+        </div>
+      </footer>
 
     <script>
         document.getElementById('contact-form').addEventListener('submit', async function (event) {
