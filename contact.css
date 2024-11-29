@@ -79,6 +79,7 @@
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
 
+    
     .form-group input,
     .form-group textarea {
         display: block;
@@ -87,7 +88,9 @@
         font-size: 14px;
         border: 1px solid #ccc;
     }
-}
+
+    
+    
     .contact-form {
         width: 90%; /* Reduce el ancho del formulario */
         margin: 0 auto; /* Centra el formulario */
