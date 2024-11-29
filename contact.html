@@ -87,26 +87,29 @@
       
     
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  // Inicializa EmailJS con tu user_id
-  emailjs.init("ppTI8ZSqq8q1h-z52");  // Reemplaza con tu user_id de EmailJS
-
-  // Escucha el evento de envío del formulario
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();  // Evita que el formulario recargue la página
-
-    // Enviar el formulario usando EmailJS
-    emailjs.sendForm("service_pshogy5", "template_7hw3m6d", this)
-      .then(function(response) {
-        // Si el envío fue exitoso
-        alert("Message sent successfully!");
-      }, function(error) {
-        // Si hubo un error
-        alert("Error sending message: " + JSON.stringify(error));
+    <script>
+      // Inicializa EmailJS con tu user_id
+      emailjs.init("ppTI8ZSqq8q1h-z52");  // Reemplaza con tu user_id de EmailJS
+    
+      // Escucha el evento de envío del formulario
+      document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();  // Evita que el formulario recargue la página
+    
+        // Enviar el formulario usando EmailJS
+        emailjs.sendForm("service_pshogy5", "template_7hw3m6d", this)
+          .then(function(response) {
+            // Si el envío fue exitoso
+            alert("Message sent successfully!");
+    
+            // Limpiar el formulario después de enviar
+            document.getElementById("contact-form").reset();  // Reinicia los campos del formulario
+          }, function(error) {
+            // Si hubo un error
+            alert("Error sending message: " + JSON.stringify(error));
+          });
       });
-  });
-</script>
-
+    </script>
+    
     
 </body>
 </html>
