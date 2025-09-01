@@ -5,10 +5,38 @@ console.log('=== CONTACT FORM JS LOADED ===');
 const EMAILJS_CONFIG = {
   PUBLIC_KEY: "ppTI8ZSqq8q1h-z52",
   SERVICE_ID: "service_pshogy5",
-  TEMPLATE_ID: "template_l0nr1y7"
+  TEMPLATE_ID: "template_l0nr1y7"        // Template para ti (recibir mensaje)
 };
 
 console.log('📋 EmailJS config loaded:', EMAILJS_CONFIG);
+
+// Notification System
+function showNotification(message, type = 'success', duration = 4000) {
+  const notification = document.getElementById('notification');
+  const notificationText = document.getElementById('notification-text');
+  
+  if (!notification || !notificationText) return;
+  
+  // Set message and type
+  notificationText.textContent = message;
+  notification.className = `notification ${type}`;
+  
+  // Show notification
+  notification.style.display = 'block';
+  
+  // Trigger animation
+  setTimeout(() => {
+    notification.classList.add('show');
+  }, 10);
+  
+  // Hide after duration
+  setTimeout(() => {
+    notification.classList.remove('show');
+    setTimeout(() => {
+      notification.style.display = 'none';
+    }, 300);
+  }, duration);
+}
 
 // Initialize EmailJS
 function initializeEmailJS() {
@@ -53,7 +81,7 @@ function setupContactForm() {
     
     // Validate form
     if (!formData.name || !formData.email || !formData.message) {
-      alert('Please fill in all fields');
+      showNotification('Por favor completa todos los campos.', 'info');
       return;
     }
     
@@ -63,20 +91,22 @@ function setupContactForm() {
     submitButton.textContent = 'Sending...';
     submitButton.disabled = true;
     
-    // Send email
+    // Send email to you (main message only)
+    console.log('📤 Sending email...');
     emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, {
-      name: formData.name,
-      email: formData.email,
+      user_name: formData.name,
+      user_email: formData.email,
+      subject: `Mensaje de ${formData.name} desde la web`,
       message: formData.message
     })
     .then(function(response) {
       console.log('✅ Email sent successfully:', response);
-      alert('Thank you! Your message has been sent successfully.');
+      showNotification('¡Mensaje enviado exitosamente!', 'success');
       form.reset();
     })
     .catch(function(error) {
       console.error('❌ Email send failed:', error);
-      alert('Sorry, there was an error sending your message. Please try again.');
+      showNotification('Error al enviar el mensaje. Inténtalo de nuevo.', 'error');
     })
     .finally(function() {
       // Reset button state
