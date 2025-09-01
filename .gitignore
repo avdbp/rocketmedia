@@ -19,6 +19,11 @@ config/emailjs.js
 secrets/
 *.config.js
 
+# Vercel Configuration
+vercel.json
+.env.local
+.env.production.local
+
 # IDE and Editor files
 .vscode/
 .idea/

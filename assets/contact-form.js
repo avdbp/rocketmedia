@@ -1,42 +1,17 @@
 // Contact Form Management
 console.log('=== CONTACT FORM JS LOADED ===');
 
-// EmailJS Configuration - Load from external config file
-// ⚠️ IMPORTANTE: Las credenciales están en 'emailjs-config.js' (NO subir a Git)
-let EMAILJS_CONFIG = {};
+// EmailJS Configuration - Simple and direct
+const EMAILJS_CONFIG = {
+  PUBLIC_KEY: "ppTI8ZSqq8q1h-z52",
+  SERVICE_ID: "service_pshogy5",
+  TEMPLATE_ID: "template_l0nr1y7"
+};
 
-// Load configuration from external file
-function loadEmailJSConfig() {
-  // Try to load from external config file
-  if (typeof window.EMAILJS_CONFIG !== 'undefined') {
-    EMAILJS_CONFIG = window.EMAILJS_CONFIG;
-    console.log('✅ EmailJS config loaded from external file');
-    return true;
-  }
-  
-  // Fallback: load from script tag (for production)
-  const configScript = document.querySelector('script[data-emailjs-config]');
-  if (configScript) {
-    try {
-      EMAILJS_CONFIG = JSON.parse(configScript.textContent);
-      console.log('✅ EmailJS config loaded from script tag');
-      return true;
-    } catch (e) {
-      console.error('❌ Failed to parse EmailJS config');
-    }
-  }
-  
-  console.error('❌ EmailJS configuration not found. Please check emailjs-config.js');
-  return false;
-}
+console.log('📋 EmailJS config loaded:', EMAILJS_CONFIG);
 
 // Initialize EmailJS
 function initializeEmailJS() {
-  // First load the configuration
-  if (!loadEmailJSConfig()) {
-    return false;
-  }
-  
   // Check if EmailJS is available
   if (typeof emailjs !== 'undefined') {
     emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
@@ -123,5 +98,7 @@ function initializeContact() {
 }
 
 // Start initialization
+console.log('🚀 Starting contact form initialization...');
 initializeContact();
+console.log('🏁 Contact form initialization script completed');
 
