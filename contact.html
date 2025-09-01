@@ -3,8 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Rocket Media Portfolio</title>
-  <meta name="description" content="Get in touch with Rocket Media to discuss your web development project or learn more about our services.">
+  
+  <!-- Primary Meta Tags -->
+  <title>Contact Rocket Media | Web Development Consultation | Get Free Quote | Barcelona, Spain</title>
+  <meta name="title" content="Contact Rocket Media | Web Development Consultation | Get Free Quote | Barcelona, Spain">
+  <meta name="description" content="Ready to start your web development project? Contact Rocket Media for a free consultation. Get expert advice on React.js, WordPress, and custom websites. Call us or fill out our contact form.">
+  <meta name="keywords" content="contact web developer, web development consultation, React.js consultation, WordPress consultation, custom website quote, Barcelona web developer, Spain web development">
+  <meta name="author" content="Rocket Media">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rocketmedia.website/contact.html">
+  <meta property="og:title" content="Contact Rocket Media | Web Development Consultation">
+  <meta property="og:description" content="Ready to start your web development project? Contact Rocket Media for a free consultation. Get expert advice on React.js, WordPress, and custom websites.">
+  <meta property="og:image" content="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Rocket Media">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://rocketmedia.website/contact.html">
+  <meta property="twitter:title" content="Contact Rocket Media | Web Development Consultation">
+  <meta property="twitter:description" content="Ready to start your web development project? Contact Rocket Media for a free consultation. Get expert advice on React.js, WordPress, and custom websites.">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png">
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="theme-color" content="#c51d15">
+  <meta name="msapplication-TileColor" content="#c51d15">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Rocket Media Contact">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://rocketmedia.website/contact.html">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dqph2qm49/image/upload/v1756660032/rocketMedia/favicon_arwjl2.png">
@@ -13,16 +49,55 @@
   
   <!-- Manifest -->
   <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#c51d15">
   
-  <!-- Fonts -->
+  <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/styles.css">
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <!-- EmailJS Configuration (NO subir a Git) -->
+  <script src="/assets/emailjs-config.js"></script>
+  
+  <!-- Structured Data / Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Rocket Media",
+    "url": "https://rocketmedia.website/contact.html",
+    "description": "Contact Rocket Media for web development consultation and project quotes.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Rocket Media",
+      "url": "https://rocketmedia.website",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+1-954-632-2636",
+          "areaServed": "US",
+          "availableLanguage": "English"
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+34-645-54-29-27",
+          "areaServed": "ES",
+          "availableLanguage": ["English", "Spanish"]
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- Skip Link for Accessibility -->
@@ -31,8 +106,14 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="container nav__container">
-      <a href="/" class="nav__logo-link">
-        <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png" alt="Rocket Media" class="nav__logo">
+      <a href="/" class="nav__logo-link" aria-label="Rocket Media - Home">
+        <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png" 
+             alt="Rocket Media - Professional Web Development Studio Logo" 
+             class="nav__logo"
+             width="420" 
+             height="140"
+             loading="eager"
+             decoding="async">
       </a>
       
       <ul class="nav__menu" id="nav-menu">
@@ -49,19 +130,25 @@
   </nav>
 
   <!-- Main Content -->
-  <main id="main">
+  <main id="main" role="main">
     <!-- Page Hero -->
-    <section class="hero section--sm" style="background: var(--color-primary); padding: calc(120px + 1rem) 0 1rem; margin-bottom: 0; text-align: center;">
+    <section class="hero section--sm" aria-labelledby="contact-hero-title" style="background: var(--color-primary); padding: calc(120px + 1rem) 0 1rem; margin-bottom: 0; text-align: center;">
       <div class="container">
-        <h1 class="hero__title" style="font-size: 2.5rem; font-weight: 700; color: var(--color-white); margin-bottom: 1rem; line-height: 1.2;">Get In Touch</h1>
-        <p class="hero__description" style="font-size: 1.125rem; color: var(--color-white); line-height: 1.6; max-width: 700px; margin: 0 auto;">Let's discuss your project</p>
+        <header class="hero__header">
+          <h1 id="contact-hero-title" class="hero__title" style="font-size: 2.5rem; font-weight: 700; color: var(--color-white); margin-bottom: 1rem; line-height: 1.2;">Get In Touch</h1>
+          <p class="hero__description" style="font-size: 1.125rem; color: var(--color-white); line-height: 1.6; max-width: 700px; margin: 0 auto;">Let's discuss your project</p>
+        </header>
       </div>
     </section>
 
     <!-- Contact Form -->
-    <section class="section contact" style="background: #ffffff; padding: 3.125rem 0; margin-top: 0;">
+    <section class="section contact" aria-labelledby="contact-form-title" style="background: #ffffff; padding: 3.125rem 0; margin-top: 0;">
       <div class="container">
         <div class="contact__content" style="max-width: 800px; margin: 0 auto;">
+          <header class="section-header" style="text-align: center; margin-bottom: 2rem;">
+            <h2 id="contact-form-title" style="font-size: 2rem; color: #1a1a1a; margin-bottom: 1rem;">Contact Us</h2>
+            <p style="font-size: 1.125rem; color: #666; line-height: 1.6;">Fill out the form below and we'll get back to you within 24 hours</p>
+          </header>
           <form class="contact__form" id="contact-form" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 2rem;">
             <div class="form-group" style="margin-bottom: 1.5rem;">
               <label for="name" class="form-label" style="display: block; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem;">Name</label>
@@ -104,7 +191,13 @@
     <div class="container">
       <div class="footer__container">
         <div class="footer__brand">
-          <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1756760430/rocketMedia/logoFinalBlanco_vi8azs.png" alt="Rocket Media" class="footer__logo">
+          <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1756760430/rocketMedia/logoFinalBlanco_vi8azs.png" 
+               alt="Rocket Media - Professional Web Development Studio Logo" 
+               class="footer__logo"
+               width="150" 
+               height="54"
+               loading="lazy"
+               decoding="async">
           <p class="footer__description">Web development and design studio creating modern, responsive websites.</p>
         </div>
         

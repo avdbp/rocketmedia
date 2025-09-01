@@ -3,8 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Rocket Media Portfolio</title>
-  <meta name="description" content="Learn about Rocket Media, a web development and design studio focused on creating modern, responsive websites and applications.">
+  
+  <!-- Primary Meta Tags -->
+  <title>About Rocket Media | Web Development Team | React.js, WordPress, UI/UX Design Experts</title>
+  <meta name="title" content="About Rocket Media | Web Development Team | React.js, WordPress, UI/UX Design Experts">
+  <meta name="description" content="Meet the Rocket Media team of web development experts. Learn about our React.js developers, WordPress specialists, and UI/UX designers. Discover our development process and technical expertise.">
+  <meta name="keywords" content="web development team, React.js developers, WordPress specialists, UI/UX designers, web development process, technical expertise, Barcelona, Spain">
+  <meta name="author" content="Rocket Media">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rocketmedia.website/about.html">
+  <meta property="og:title" content="About Rocket Media | Web Development Team">
+  <meta property="og:description" content="Meet the Rocket Media team of web development experts. Learn about our React.js developers, WordPress specialists, and UI/UX designers.">
+  <meta property="og:image" content="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Rocket Media">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://rocketmedia.website/about.html">
+  <meta property="twitter:title" content="About Rocket Media | Web Development Team">
+  <meta property="twitter:description" content="Meet the Rocket Media team of web development experts. Learn about our React.js developers, WordPress specialists, and UI/UX designers.">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png">
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="theme-color" content="#c51d15">
+  <meta name="msapplication-TileColor" content="#c51d15">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Rocket Media About">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://rocketmedia.website/about.html">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dqph2qm49/image/upload/v1756660032/rocketMedia/favicon_arwjl2.png">
@@ -13,15 +49,48 @@
   
   <!-- Manifest -->
   <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#c51d15">
   
-  <!-- Fonts -->
+  <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/styles.css">
+  
+  <!-- Structured Data / Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Rocket Media",
+    "url": "https://rocketmedia.website/about.html",
+    "description": "Learn about the Rocket Media team of web development experts, our development process, and technical expertise.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Rocket Media",
+      "description": "Web development and design studio",
+      "url": "https://rocketmedia.website",
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "Alejandro Van den Bussche",
+          "jobTitle": "Web Developer",
+          "description": "Full-stack developer with expertise in React.js, Node.js, and modern web technologies"
+        },
+        {
+          "@type": "Person",
+          "name": "Daniela Van den Bussche",
+          "jobTitle": "UI/UX Designer",
+          "description": "Creative designer focused on user experience and modern design principles"
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- Skip Link for Accessibility -->
@@ -30,8 +99,14 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="container nav__container">
-      <a href="/" class="nav__logo-link">
-        <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png" alt="Rocket Media" class="nav__logo">
+      <a href="/" class="nav__logo-link" aria-label="Rocket Media - Home">
+        <img src="https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png" 
+             alt="Rocket Media - Professional Web Development Studio Logo" 
+             class="nav__logo"
+             width="420" 
+             height="140"
+             loading="eager"
+             decoding="async">
       </a>
       
       <ul class="nav__menu" id="nav-menu">
@@ -48,23 +123,27 @@
   </nav>
 
   <!-- Main Content -->
-  <main id="main">
+  <main id="main" role="main">
     <!-- Page Hero -->
-    <section class="hero section--sm" style="background: var(--color-primary); padding: calc(120px + 1rem) 0 1rem; margin-bottom: 0; text-align: center;">
+    <section class="hero section--sm" aria-labelledby="about-hero-title" style="background: var(--color-primary); padding: calc(120px + 1rem) 0 1rem; margin-bottom: 0; text-align: center;">
       <div class="container">
-        <h1 class="hero__title" style="font-size: 2.5rem; font-weight: 700; color: var(--color-white); margin-bottom: 1rem; line-height: 1.2;">About Rocket Media</h1>
-        <p class="hero__description" style="font-size: 1.125rem; color: var(--color-white); line-height: 1.6; max-width: 700px; margin: 0 auto;">Rocket Media is a web development and design studio focused on creating modern, responsive websites and web applications. We specialize in clean code, exceptional user experience, and delivering projects that exceed expectations.</p>
+        <header class="hero__header">
+          <h1 id="about-hero-title" class="hero__title" style="font-size: 2.5rem; font-weight: 700; color: var(--color-white); margin-bottom: 1rem; line-height: 1.2;">About Rocket Media</h1>
+          <p class="hero__description" style="font-size: 1.125rem; color: var(--color-white); line-height: 1.6; max-width: 700px; margin: 0 auto;">Rocket Media is a web development and design studio focused on creating modern, responsive websites and web applications. We specialize in clean code, exceptional user experience, and delivering projects that exceed expectations.</p>
+        </header>
       </div>
     </section>
 
     <!-- Team Section -->
-    <section class="section team" style="margin-top: 0; padding-top: 3.125rem;">
+    <section class="section team" aria-labelledby="team-title" style="margin-top: 0; padding-top: 3.125rem;">
       <div class="container">
         <div class="team__content">
-          <h2 class="team__title">Meet Our Team</h2>
-          <p class="team__subtitle">Get to know the creative minds behind Rocket Media</p>
+          <header class="section-header">
+            <h2 id="team-title" class="team__title">Meet Our Team</h2>
+            <p class="team__subtitle">Get to know the creative minds behind Rocket Media</p>
+          </header>
           
-          <div class="team__grid" id="team-grid">
+          <div class="team__grid" id="team-grid" role="list" aria-label="Rocket Media team members">
             <!-- Team members will be populated by JavaScript -->
           </div>
         </div>
@@ -72,13 +151,15 @@
     </section>
 
     <!-- Process Section -->
-    <section class="section process">
+    <section class="section process" aria-labelledby="process-title">
       <div class="container">
         <div class="process__content">
-          <h2 class="process__title">Our Process</h2>
-          <p class="process__subtitle">How we bring your vision to life</p>
+          <header class="section-header">
+            <h2 id="process-title" class="process__title">Our Process</h2>
+            <p class="process__subtitle">How we bring your vision to life</p>
+          </header>
           
-          <div class="process__grid" id="process-grid">
+          <div class="process__grid" id="process-grid" role="list" aria-label="Web development process steps">
             <!-- Process steps will be populated by JavaScript -->
           </div>
         </div>
@@ -86,11 +167,13 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="section skills-section">
+    <section class="section skills-section" aria-labelledby="skills-title">
       <div class="container">
         <div class="skills__content">
-          <h2 class="skills__title">Skills & Technologies</h2>
-          <div class="skills__grid">
+          <header class="section-header">
+            <h2 id="skills-title" class="skills__title">Skills & Technologies</h2>
+          </header>
+          <div class="skills__grid" role="list" aria-label="Technical skills and technologies">
             <div class="skill-item">
               <div class="skill-icon">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
