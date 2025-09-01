@@ -114,13 +114,13 @@ const portfolioData = {
   team: [
     {
       name: "Alejandro Van den Bussche",
-      role: "Lead Developer",
+      role: "Web Developer",
       bio: "Full-stack developer with 5+ years of experience in modern web technologies. Specializes in React.js, Node.js, and cloud deployment.",
       image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1727992809/rocketMedia/alejandro_a6gkqs.png",
       skills: ["React.js", "Node.js", "MongoDB", "HTML", "CSS", "JavaScript", "WordPress", "Elementor"]
     },
     {
-      name: "Daniela Rodriguez",
+      name: "Daniela Van den Bussche",
       role: "UI/UX Designer",
       bio: "Creative designer focused on user experience and modern design principles. Expert in Figma, Adobe Creative Suite, and design systems.",
       image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1727994820/rocketMedia/daniela_vvtr0p.png",

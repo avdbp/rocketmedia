@@ -339,8 +339,57 @@ a:hover {
   .services-grid,
   .benefits-grid,
   .tech-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-md) !important;
+    max-width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .service-item,
+  .benefit-item,
+  .tech-item {
+    padding: var(--spacing-lg) !important;
+  }
+  
+  .service-item h3,
+  .benefit-item h3,
+  .tech-item h3 {
+    font-size: 1.125rem !important;
+  }
+  
+  .service-item p,
+  .benefit-item p,
+  .tech-item p {
+    font-size: 0.95rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid,
+  .benefits-grid,
+  .tech-grid {
+    gap: var(--spacing-sm) !important;
+    max-width: 100% !important;
+    padding: 0 var(--spacing-sm) !important;
+  }
+  
+  .service-item,
+  .benefit-item,
+  .tech-item {
+    padding: var(--spacing-md) !important;
+  }
+  
+  .service-item h3,
+  .benefit-item h3,
+  .tech-item h3 {
+    font-size: 1.125rem !important;
+  }
+  
+  .service-item p,
+  .benefit-item p,
+  .tech-item p {
+    font-size: 0.9rem !important;
   }
 }
 
@@ -455,6 +504,9 @@ a:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-item {
@@ -520,6 +572,9 @@ a:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .benefit-item {
@@ -588,6 +643,9 @@ a:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tech-item {
@@ -890,6 +948,55 @@ a:hover {
   border: 1px solid var(--color-gray-200);
 }
 
+/* Responsive Team Grid */
+@media (max-width: 768px) {
+  .team__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    gap: var(--spacing-lg);
+  }
+  
+  .team-member {
+    padding: var(--spacing-lg);
+  }
+  
+  .team-member__name {
+    font-size: 1.5rem;
+  }
+  
+  .team-member__role {
+    font-size: 1rem;
+  }
+  
+  .team-member__bio {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team__grid {
+    max-width: 100%;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .team-member {
+    padding: var(--spacing-md);
+  }
+  
+  .team-member__name {
+    font-size: 1.375rem;
+  }
+  
+  .team-member__skills {
+    gap: var(--spacing-xs);
+  }
+  
+  .team-member__skill {
+    font-size: 0.8rem;
+    padding: var(--spacing-xs);
+  }
+}
+
 /* Services Section */
 .services {
   background: var(--color-white);
@@ -1048,13 +1155,46 @@ a:hover {
   .process__grid {
     grid-template-columns: repeat(2, 1fr);
     max-width: 600px;
+    gap: var(--spacing-md);
+  }
+  
+  .process-step {
+    padding: var(--spacing-md);
+  }
+  
+  .process-step__title {
+    font-size: 1rem;
+  }
+  
+  .process-step__description {
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
   .process__grid {
     grid-template-columns: 1fr;
-    max-width: 300px;
+    max-width: 100%;
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .process-step {
+    padding: var(--spacing-sm);
+  }
+  
+  .process-step__number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .process-step__title {
+    font-size: 0.95rem;
+  }
+  
+  .process-step__description {
+    font-size: 0.8rem;
   }
 }
 
@@ -1145,13 +1285,34 @@ a:hover {
     max-width: 600px;
     gap: var(--spacing-md);
   }
+  
+  .skill-item {
+    padding: var(--spacing-md);
+  }
+  
+  .skill-item h3 {
+    font-size: 1.125rem;
+  }
 }
 
 @media (max-width: 480px) {
   .skills__grid {
     grid-template-columns: 1fr;
-    max-width: 300px;
-    gap: var(--spacing-md);
+    max-width: 100%;
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .skill-item {
+    padding: var(--spacing-sm);
+  }
+  
+  .skill-item h3 {
+    font-size: 1rem;
+  }
+  
+  .skill-item p {
+    font-size: 0.875rem;
   }
 }
 
