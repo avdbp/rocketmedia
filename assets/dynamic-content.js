@@ -38,15 +38,6 @@ const portfolioData = {
       featured: false
     },
     {
-      title: "Commissions App Demo",
-      description: "Demo application for commission management. Complete system for sales calculation and tracking with administrative dashboard.",
-      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1756752496/rocketMedia/001_-_Captura_dgfkxd.webp",
-      technologies: ["React.js", "Node.js", "Express", "MongoDB"],
-      link: "https://commissions-app-demo-2rf1.vercel.app/",
-      repo: "https://github.com/avdbp/commissions-app-demo",
-      featured: false
-    },
-    {
       title: "VMA Immigration",
       description: "Website for immigration services. Informative platform with contact forms and resources for immigration procedures.",
       image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1756752497/rocketMedia/008_-_Captura_ogknrk.webp",
