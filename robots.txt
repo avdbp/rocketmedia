@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://rocketmedia.website/sitemap.xml
+Sitemap: https://www.rocketmedia.website/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
