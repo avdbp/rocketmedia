@@ -1,15 +1,15 @@
 // Portfolio Data
 const portfolioData = {
   projects: [
-    {
-      title: "InspireAI",
-      description: "AI-powered Salesforce solutions for modern enterprises. Design by <a href='https://estefanialombardo.com/' target='_blank' rel='noopener noreferrer'>Estefania Lombardo</a> and development by Rocketmedia.",
-      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1756755663/rocketMedia/010_-_Captura_copy_ozjdbp.webp",
-      technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
-      link: "https://inspireai.com/",
-      repo: null,
-      featured: true
-    },
+    // {
+    //   title: "InspireAI",
+    //   description: "AI-powered Salesforce solutions for modern enterprises. Design by <a href='https://estefanialombardo.com/' target='_blank' rel='noopener noreferrer'>Estefania Lombardo</a> and development by Rocketmedia.",
+    //   image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1756755663/rocketMedia/010_-_Captura_copy_ozjdbp.webp",
+    //   technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
+    //   link: "https://inspireai.com/",
+    //   repo: null,
+    //   featured: true
+    // },
     {
       title: "SalesScoreKeeper",
       description: "Web application for sales and commission tracking. Complete commercial management system with metrics and reports. Design by <a href='https://estefanialombardo.com/' target='_blank' rel='noopener noreferrer'>Estefania Lombardo</a> and development by Rocketmedia.",
