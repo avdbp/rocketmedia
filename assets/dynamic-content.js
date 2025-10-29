@@ -99,6 +99,15 @@ const portfolioData = {
       link: "https://restomain-email.vercel.app/",
       repo: "https://github.com/avdbp/restomain-email",
       featured: false
+    },
+    {
+      title: "Woodrock Design",
+      description: "Custom wood and stone interiors website for kitchens, bathrooms, closets, and more. Tailored designs crafted to elevate lifestyle with natural elegance.",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1761327763/rocketMedia/004_-_Captura_ftiq0y.png",
+      technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
+      link: "https://woodrockusa.com/",
+      repo: null,
+      featured: false
     }
   ],
   
