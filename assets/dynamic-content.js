@@ -1,6 +1,15 @@
 // Portfolio Data
 const portfolioData = {
   projects: [
+    {
+      title: "305 Expo",
+      description: "A Miami-based consortium of specialized companies delivering complete solutions in visual communication, exhibits, and commercial environments. 305 Expo integrates every stage in-house for unmatched efficiency and consistency.",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1762389653/rocketMedia/305expo_sknicc.webp",
+      technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
+      link: "https://305expo.com/",
+      repo: null,
+      featured: true
+    },
     // {
     //   title: "InspireAI",
     //   description: "AI-powered Salesforce solutions for modern enterprises. Design by <a href='https://estefanialombardo.com/' target='_blank' rel='noopener noreferrer'>Estefania Lombardo</a> and development by Rocketmedia.",
