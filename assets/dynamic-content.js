@@ -46,15 +46,15 @@ const portfolioData = {
       repo: "https://github.com/avdbp/roi-calculator",
       featured: false
     },
-    {
-      title: "VMA Immigration",
-      description: "Website for immigration services. Informative platform with contact forms and resources for immigration procedures.",
-      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1756752497/rocketMedia/008_-_Captura_ogknrk.webp",
-      technologies: ["React.js", "CSS3", "JavaScript"],
-      link: "https://inmmigration-dv2dp9ppz-alejandros-projects-75565a5d.vercel.app/",
-      repo: "https://github.com/avdbp/inmmigration-vma",
-      featured: false
-    },
+    // {
+    //   title: "VMA Immigration",
+    //   description: "Website for immigration services. Informative platform with contact forms and resources for immigration procedures.",
+    //   image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1756752497/rocketMedia/008_-_Captura_ogknrk.webp",
+    //   technologies: ["React.js", "CSS3", "JavaScript"],
+    //   link: "https://inmmigration-dv2dp9ppz-alejandros-projects-75565a5d.vercel.app/",
+    //   repo: "https://github.com/avdbp/inmmigration-vma",
+    //   featured: false
+    // },
     {
       title: "Floristería Emmy Sants",
       description: "Complete e-commerce for flower shop. Full-stack development with order system, inventory management and payment gateway. Collaboration with Ana Gabriela Medina.",
