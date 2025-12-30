@@ -10,6 +10,15 @@ const portfolioData = {
       repo: null,
       featured: true
     },
+    {
+      title: "Explorer Tours Bonaire",
+      description: "Website for guided island tours in Bonaire. Relaxed, small-group experiences showcasing the island's natural beauty, history, and culture.",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1767085216/rocketMedia/010_-_Captura_qiwfwc.webp",
+      technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
+      link: "https://etbonaire.com/",
+      repo: null,
+      featured: true
+    },
     // {
     //   title: "InspireAI",
     //   description: "AI-powered Salesforce solutions for modern enterprises. Design by <a href='https://estefanialombardo.com/' target='_blank' rel='noopener noreferrer'>Estefania Lombardo</a> and development by Rocketmedia.",
@@ -118,6 +127,7 @@ const portfolioData = {
       repo: null,
       featured: false
     }
+    
   ],
   
   team: [
