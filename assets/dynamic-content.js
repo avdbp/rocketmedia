@@ -4,7 +4,7 @@ const portfolioData = {
     {
       title: "305 Expo",
       description: "A Miami-based consortium of specialized companies delivering complete solutions in visual communication, exhibits, and commercial environments. 305 Expo integrates every stage in-house for unmatched efficiency and consistency.",
-      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1762389653/rocketMedia/305expo_sknicc.webp",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1767645677/rocketMedia/305Expo-web_f5z3ag.webp",
       technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
       link: "https://305expo.com/",
       repo: null,
