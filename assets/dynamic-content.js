@@ -76,7 +76,7 @@ const portfolioData = {
     {
       title: "La Wash Londres 81",
       description: "Website for laundry and dry cleaning services in Barcelona. Elegant and functional design with online booking system and service information.",
-      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1756752496/rocketMedia/004_-_Captura_ydev3e.webp",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1771958059/rocketMedia/captura-web_qppq4n.webp",
       technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
       link: "https://lawash-londresbcn.es/",
       repo: null,
