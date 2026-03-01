@@ -20,7 +20,7 @@ const portfolioData = {
       featured: true
     },
     {
-      title: "MindCare AI",
+      title: "MindCare AI App",
       description: "MindCare AI is an emotional wellness web app combining mood tracking, mindfulness activities, and an AI assistant with a therapeutic approach to support daily mental health.",
       image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1772389001/rocketMedia/app_mzi3nh.webp",
       technologies: ["React.js", "AI", "Vercel"],
