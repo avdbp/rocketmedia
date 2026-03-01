@@ -19,6 +19,16 @@ const portfolioData = {
       repo: null,
       featured: true
     },
+    {
+      title: "MindCare AI",
+      description: "MindCare AI is an emotional wellness web app combining mood tracking, mindfulness activities, and an AI assistant with a therapeutic approach to support daily mental health.",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1772389001/rocketMedia/app_mzi3nh.webp",
+      technologies: ["React.js", "AI", "Vercel"],
+      link: "https://mind-care-ai-one.vercel.app/",
+      repo: null,
+      featured: true,
+      wideCard: true
+    },
     // {
     //   title: "InspireAI",
     //   description: "AI-powered Salesforce solutions for modern enterprises. Design by <a href='https://estefanialombardo.com/' target='_blank' rel='noopener noreferrer'>Estefania Lombardo</a> and development by Rocketmedia.",
@@ -186,8 +196,30 @@ function renderProjects() {
   const projectsGrid = document.getElementById('projects-grid');
   if (!projectsGrid) return;
   
-  projectsGrid.innerHTML = portfolioData.projects.map(project => `
-    <div class="project-card">
+  projectsGrid.innerHTML = portfolioData.projects.map(project => {
+    const isWide = project.wideCard === true;
+    const cardClass = isWide ? 'project-card project-card--wide' : 'project-card';
+    if (isWide) {
+      return `
+    <div class="${cardClass}">
+      <div class="project-card--wide__image">
+        <img src="${project.image}" alt="${project.title}" loading="lazy">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">${project.title}</h3>
+        <p class="project-description">${project.description}</p>
+        <div class="project-tags">
+          ${project.technologies.map(tech => `<span class="tag">${tech}</span>`).join('')}
+        </div>
+        <div class="project-links">
+          <a href="${project.link}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View Project</a>
+          ${project.repo ? `<a href="${project.repo}" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">View Code</a>` : ''}
+        </div>
+      </div>
+    </div>`;
+    }
+    return `
+    <div class="${cardClass}">
       <div class="project-image">
         <img src="${project.image}" alt="${project.title}" loading="lazy">
       </div>
@@ -202,8 +234,8 @@ function renderProjects() {
           ${project.repo ? `<a href="${project.repo}" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">View Code</a>` : ''}
         </div>
       </div>
-    </div>
-  `).join('');
+    </div>`;
+  }).join('');
   
   console.log('✅ Projects rendered with repo buttons');
 }
