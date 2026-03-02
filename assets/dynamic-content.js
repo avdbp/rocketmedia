@@ -63,7 +63,8 @@ const portfolioData = {
       technologies: ["React.js", "CSS3", "Chart.js"],
       link: "https://roi-calculator-sable.vercel.app/",
       repo: "https://github.com/avdbp/roi-calculator",
-      featured: false
+      featured: false,
+      wideCard: true
     },
     // {
     //   title: "VMA Immigration",
