@@ -62,11 +62,11 @@ const portfolioData = {
       category: "website"
     },
     {
-      title: "ROI Calculator in React",
+      title: "Roi Calculator App",
       description: "Web application for calculating return on investment. Intuitive interface with interactive charts and advanced financial calculations.",
-      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1756752496/rocketMedia/002_-_Captura_ucvfbz.webp",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1772424988/rocketMedia/roi_d4rg89.webp",
       technologies: ["React.js", "CSS3", "Chart.js"],
-      link: "https://roi-calculator-sable.vercel.app/",
+      link: "https://new-roi-calculator.vercel.app/",
       repo: "https://github.com/avdbp/roi-calculator",
       featured: false,
       wideCard: true,
