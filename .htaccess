@@ -2,14 +2,18 @@
 
 # Enable Rewrite Engine
 RewriteEngine On
+RewriteBase /
 
-# Force HTTPS (uncomment when SSL is available)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# 301: /index.html → canonical home
+RewriteRule ^index\.html$ https://www.rocketmedia.website/ [R=301,L]
 
-# Remove www (uncomment if you want to redirect www to non-www)
-# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+# Force HTTPS → https://www.rocketmedia.website
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.rocketmedia.website/$1 [L,R=301]
+
+# Force www (non-www → www)
+RewriteCond %{HTTP_HOST} ^rocketmedia\.website$ [NC]
+RewriteRule ^(.*)$ https://www.rocketmedia.website/$1 [L,R=301]
 
 # Remove trailing slashes
 RewriteCond %{REQUEST_FILENAME} !-d
