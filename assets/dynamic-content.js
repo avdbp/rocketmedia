@@ -8,7 +8,8 @@ const portfolioData = {
       technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
       link: "https://305expo.com/",
       repo: null,
-      featured: true
+      featured: true,
+      category: "website"
     },
     {
       title: "Explorer Tours Bonaire",
@@ -17,7 +18,8 @@ const portfolioData = {
       technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
       link: "https://etbonaire.com/",
       repo: null,
-      featured: true
+      featured: true,
+      category: "website"
     },
     {
       title: "MindCare AI App",
@@ -27,7 +29,8 @@ const portfolioData = {
       link: "https://mind-care-ai-one.vercel.app/",
       repo: null,
       featured: true,
-      wideCard: true
+      wideCard: true,
+      category: "app"
     },
     // {
     //   title: "InspireAI",
@@ -45,7 +48,8 @@ const portfolioData = {
       technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
       link: "https://salesscorekeeper.com/",
       repo: null,
-      featured: false
+      featured: false,
+      category: "website"
     },
     {
       title: "Precision Property Management",
@@ -54,7 +58,8 @@ const portfolioData = {
       technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
       link: "https://ppmfla.com/",
       repo: null,
-      featured: true
+      featured: true,
+      category: "website"
     },
     {
       title: "ROI Calculator in React",
@@ -64,7 +69,8 @@ const portfolioData = {
       link: "https://roi-calculator-sable.vercel.app/",
       repo: "https://github.com/avdbp/roi-calculator",
       featured: false,
-      wideCard: true
+      wideCard: true,
+      category: "app"
     },
     // {
     //   title: "VMA Immigration",
@@ -82,7 +88,8 @@ const portfolioData = {
       technologies: ["React.js", "Node.js", "Express", "MongoDB", "Netlify"],
       link: "https://floristeriaemmysants.netlify.app/",
       repo: "https://github.com/avdbp/frontend-emmy-sants",
-      featured: true
+      featured: true,
+      category: "website"
     },
     {
       title: "La Wash Londres 81",
@@ -91,7 +98,8 @@ const portfolioData = {
       technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
       link: "https://lawash-londresbcn.es/",
       repo: null,
-      featured: false
+      featured: false,
+      category: "website"
     },
     {
       title: "SSK Email Template in HTML",
@@ -100,7 +108,8 @@ const portfolioData = {
       technologies: ["HTML5", "CSS3", "Email Marketing", "Responsive Design"],
       link: "https://ssk-mails.vercel.app/",
       repo: "https://github.com/avdbp/ssk-mails",
-      featured: false
+      featured: false,
+      category: "other"
     },
     {
       title: "SSK Mail Signature",
@@ -109,7 +118,8 @@ const portfolioData = {
       technologies: ["HTML5", "CSS3", "Email Marketing", "Responsive Design"],
       link: "https://mail-signature-demo-uxys.vercel.app/",
       repo: "https://github.com/avdbp/mail-signature-demo",
-      featured: false
+      featured: false,
+      category: "other"
     },
     {
       title: "Metro X USA",
@@ -118,7 +128,8 @@ const portfolioData = {
       technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
       link: "https://metroxusa.com/",
       repo: null,
-      featured: false
+      featured: false,
+      category: "website"
     },
     {
       title: "Restoration Maintenance Email Template",
@@ -127,7 +138,8 @@ const portfolioData = {
       technologies: ["HTML5", "CSS3", "Email Marketing", "Responsive Design"],
       link: "https://restomain-email.vercel.app/",
       repo: "https://github.com/avdbp/restomain-email",
-      featured: false
+      featured: false,
+      category: "other"
     },
     {
       title: "Woodrock Design",
@@ -136,7 +148,8 @@ const portfolioData = {
       technologies: ["WordPress", "HTML5", "CSS3", "JavaScript"],
       link: "https://woodrockusa.com/",
       repo: null,
-      featured: false
+      featured: false,
+      category: "website"
     }
     
   ],
@@ -192,12 +205,17 @@ const portfolioData = {
   ]
 };
 
-// Render Projects with Repo buttons
-function renderProjects() {
+// Render Projects with Repo buttons (filter: 'all' | 'website' | 'app' | 'other')
+function renderProjects(filter) {
   const projectsGrid = document.getElementById('projects-grid');
   if (!projectsGrid) return;
   
-  projectsGrid.innerHTML = portfolioData.projects.map(project => {
+  const filterValue = filter || 'all';
+  const projects = filterValue === 'all'
+    ? portfolioData.projects
+    : portfolioData.projects.filter(p => (p.category || 'other') === filterValue);
+  
+  projectsGrid.innerHTML = projects.map(project => {
     const isWide = project.wideCard === true;
     const cardClass = isWide ? 'project-card project-card--wide' : 'project-card';
     if (isWide) {
@@ -238,7 +256,21 @@ function renderProjects() {
     </div>`;
   }).join('');
   
-  console.log('✅ Projects rendered with repo buttons');
+  console.log('✅ Projects rendered:', projects.length, 'filter:', filterValue);
+}
+
+function initProjectFilters() {
+  const container = document.querySelector('.projects-filter');
+  if (!container) return;
+  const buttons = container.querySelectorAll('.projects-filter__btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter') || 'all';
+      buttons.forEach(b => b.classList.remove('is-active'));
+      this.classList.add('is-active');
+      renderProjects(filter);
+    });
+  });
 }
 
 // Render Team
@@ -316,7 +348,8 @@ function initializePage() {
   
   if (currentPage.includes('projects.html')) {
     console.log('📁 Projects page detected');
-    renderProjects();
+    renderProjects('all');
+    initProjectFilters();
   } else if (currentPage.includes('about.html')) {
     console.log('👥 About page detected');
     renderTeam();

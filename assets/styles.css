@@ -768,6 +768,35 @@ a:hover {
   background: var(--color-gray-50);
 }
 
+.projects-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  justify-content: center;
+}
+
+.projects-filter__btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: 2px solid var(--color-primary);
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.projects-filter__btn:hover {
+  background: var(--color-gray-50);
+}
+
+.projects-filter__btn.is-active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
