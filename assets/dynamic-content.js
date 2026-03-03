@@ -9,7 +9,7 @@ const portfolioData = {
       link: "https://305expo.com/",
       repo: null,
       featured: true,
-      category: "website"
+      categories: ["website"]
     },
     {
       title: "Explorer Tours Bonaire",
@@ -19,7 +19,7 @@ const portfolioData = {
       link: "https://etbonaire.com/",
       repo: null,
       featured: true,
-      category: "website"
+      categories: ["website"]
     },
     {
       title: "MindCare AI App",
@@ -30,7 +30,7 @@ const portfolioData = {
       repo: null,
       featured: true,
       wideCard: true,
-      category: "app"
+      categories: ["app", "fullstack"]
     },
     // {
     //   title: "InspireAI",
@@ -49,7 +49,7 @@ const portfolioData = {
       link: "https://salesscorekeeper.com/",
       repo: null,
       featured: false,
-      category: "website"
+      categories: ["website"]
     },
     {
       title: "Precision Property Management",
@@ -59,7 +59,7 @@ const portfolioData = {
       link: "https://ppmfla.com/",
       repo: null,
       featured: true,
-      category: "website"
+      categories: ["website"]
     },
     {
       title: "Roi Calculator App",
@@ -70,7 +70,7 @@ const portfolioData = {
       repo: "https://github.com/avdbp/roi-calculator",
       featured: false,
       wideCard: true,
-      category: "app"
+      categories: ["app", "fullstack"]
     },
     // {
     //   title: "VMA Immigration",
@@ -89,7 +89,17 @@ const portfolioData = {
       link: "https://floristeriaemmysants.netlify.app/",
       repo: "https://github.com/avdbp/frontend-emmy-sants",
       featured: true,
-      category: "website"
+      categories: ["website", "fullstack"]
+    },
+    {
+      title: "Volta Coffee",
+      description: "CMS demo for a specialty coffee roastery in Barcelona. Single origin, small batch. Try the admin panel: click the gear icon at the bottom, then log in with user <strong>admin</strong> and password <strong>volta2024</strong>.",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1772553836/rocketMedia/volta_hbck0x.webp",
+      technologies: ["React.js", "CMS", "Vercel"],
+      link: "https://volta-theta.vercel.app/",
+      repo: null,
+      featured: false,
+      categories: ["website", "fullstack"]
     },
     {
       title: "La Wash Londres 81",
@@ -99,7 +109,7 @@ const portfolioData = {
       link: "https://lawash-londresbcn.es/",
       repo: null,
       featured: false,
-      category: "website"
+      categories: ["website"]
     },
     {
       title: "SSK Email Template in HTML",
@@ -109,7 +119,7 @@ const portfolioData = {
       link: "https://ssk-mails.vercel.app/",
       repo: "https://github.com/avdbp/ssk-mails",
       featured: false,
-      category: "other"
+      categories: ["other"]
     },
     {
       title: "SSK Mail Signature",
@@ -119,7 +129,7 @@ const portfolioData = {
       link: "https://mail-signature-demo-uxys.vercel.app/",
       repo: "https://github.com/avdbp/mail-signature-demo",
       featured: false,
-      category: "other"
+      categories: ["other"]
     },
     {
       title: "Metro X USA",
@@ -129,7 +139,7 @@ const portfolioData = {
       link: "https://metroxusa.com/",
       repo: null,
       featured: false,
-      category: "website"
+      categories: ["website"]
     },
     {
       title: "Restoration Maintenance Email Template",
@@ -139,7 +149,7 @@ const portfolioData = {
       link: "https://restomain-email.vercel.app/",
       repo: "https://github.com/avdbp/restomain-email",
       featured: false,
-      category: "other"
+      categories: ["other"]
     },
     {
       title: "Woodrock Design",
@@ -149,7 +159,7 @@ const portfolioData = {
       link: "https://woodrockusa.com/",
       repo: null,
       featured: false,
-      category: "website"
+      categories: ["website"]
     }
     
   ],
@@ -205,7 +215,7 @@ const portfolioData = {
   ]
 };
 
-// Render Projects with Repo buttons (filter: 'all' | 'website' | 'app' | 'other')
+// Render Projects with Repo buttons (filter: 'all' | 'website' | 'app' | 'fullstack' | 'other')
 function renderProjects(filter) {
   const projectsGrid = document.getElementById('projects-grid');
   if (!projectsGrid) return;
@@ -213,7 +223,10 @@ function renderProjects(filter) {
   const filterValue = filter || 'all';
   const projects = filterValue === 'all'
     ? portfolioData.projects
-    : portfolioData.projects.filter(p => (p.category || 'other') === filterValue);
+    : portfolioData.projects.filter(p => {
+        const cats = Array.isArray(p.categories) ? p.categories : [p.category || 'other'];
+        return cats.includes(filterValue);
+      });
   
   projectsGrid.innerHTML = projects.map(project => {
     const isWide = project.wideCard === true;
