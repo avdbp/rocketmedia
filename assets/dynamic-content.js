@@ -85,7 +85,7 @@ const portfolioData = {
       title: "Floristería Emmy Sants",
       description: "Complete e-commerce for flower shop. Full-stack development with order system, inventory management and payment gateway. Collaboration with Ana Gabriela Medina.",
       image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1756753367/rocketMedia/009_-_Captura_n9u52n.webp",
-      technologies: ["React.js", "Node.js", "Express", "MongoDB", "Netlify"],
+      technologies: ["React.js", "Node.js", "Express", "MongoDB", "AI"],
       link: "https://floristeriaemmysants.netlify.app/",
       repo: "https://github.com/avdbp/frontend-emmy-sants",
       featured: true,
