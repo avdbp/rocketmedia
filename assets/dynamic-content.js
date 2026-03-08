@@ -221,12 +221,14 @@ function renderProjects(filter) {
   if (!projectsGrid) return;
   
   const filterValue = filter || 'all';
-  const projects = filterValue === 'all'
+  let projects = filterValue === 'all'
     ? portfolioData.projects
     : portfolioData.projects.filter(p => {
         const cats = Array.isArray(p.categories) ? p.categories : [p.category || 'other'];
         return cats.includes(filterValue);
       });
+  // Orden: primero cards normales (verticales), luego wide (horizontales)
+  projects = [...projects].sort((a, b) => (a.wideCard ? 1 : 0) - (b.wideCard ? 1 : 0));
   
   projectsGrid.innerHTML = projects.map(project => {
     const isWide = project.wideCard === true;
