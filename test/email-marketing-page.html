@@ -256,24 +256,12 @@
     padding: 0;
   }
 
-  /* Refuerzo explícito móvil — por si tema/emulador interfieren */
-  @media (max-width: 768px) {
-    body .em-page-wrapper .em-page-hero,
-    .em-page-wrapper .em-page-hero {
-      display: flex !important;
-      flex-direction: column !important;
-      grid-template-columns: unset !important;
-    }
-    body .em-page-wrapper .form-row-double,
-    .em-page-wrapper .form-row-double {
-      grid-template-columns: 1fr !important;
-    }
-  }
-
   /* ============================================
-     DESKTOP — min-width 769px
+     DESKTOP — solo a partir de 1025px
+     Breakpoint amplio para que móvil/tablet siempre
+     vean layout de 1 columna (evita viewport mal configurado)
   ============================================ */
-  @media (min-width: 769px) {
+  @media (min-width: 1025px) {
     body .em-page-wrapper .em-page-hero,
     .em-page-wrapper .em-page-hero {
       padding: 50px 30px;
@@ -468,6 +456,21 @@
   </div>
 </div>
 
+<script>
+(function() {
+  var vp = document.querySelector('meta[name="viewport"]');
+  var ok = vp && vp.getAttribute('content').indexOf('width=device-width') !== -1;
+  if (!ok) {
+    if (vp) vp.setAttribute('content', 'width=device-width, initial-scale=1, viewport-fit=cover');
+    else {
+      var m = document.createElement('meta');
+      m.name = 'viewport';
+      m.content = 'width=device-width, initial-scale=1, viewport-fit=cover';
+      document.head.appendChild(m);
+    }
+  }
+})();
+</script>
 <script>
 if (!document.querySelector('script[src*="calendly"]')) {
   var s = document.createElement('script');
