@@ -1,0 +1,536 @@
+<style>
+  /* ============================================
+     MOBILE FIRST — Base = móvil
+     Scoped con body para ganar especificidad vs tema WordPress/Avada
+  ============================================ */
+
+  body .em-page-wrapper,
+  .em-page-wrapper {
+    background-color: #E6F3FB;
+    min-height: 100vh;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* HERO — móvil: columna única, orden visual óptimo */
+  body .em-page-wrapper .em-page-hero,
+  .em-page-wrapper .em-page-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px;
+    align-items: stretch;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Imagen primero en móvil — impacto visual inmediato */
+  .em-hero-image {
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 16px;
+    object-fit: contain;
+  }
+
+  .em-hero-badge {
+    display: inline-block;
+    align-self: flex-start;
+    background: #1a4a8d;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+  }
+
+  .em-hero h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #424851;
+    line-height: 1.25;
+    margin: 0 0 14px;
+    letter-spacing: -0.5px;
+  }
+
+  .em-hero .em-hero-intro {
+    font-size: 16px;
+    color: #525252;
+    margin: 0 0 20px;
+    line-height: 1.55;
+  }
+
+  .em-hero-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+
+  .em-hero-benefits li {
+    font-size: 14px;
+    color: #424851;
+    padding: 8px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+  }
+
+  .em-hero-benefits li::before {
+    content: "✓";
+    color: #0698d6;
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+
+  .em-hero-trust {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* FORMULARIO — card flotante en móvil */
+  body .em-page-wrapper .linkedin-form-wrapper,
+  .em-page-wrapper .linkedin-form-wrapper {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    margin: 0;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(26, 74, 141, 0.12), 0 2px 8px rgba(0,0,0,0.04);
+    position: relative;
+    z-index: 9999;
+    order: 2; /* Formulario después del copy en móvil */
+  }
+
+  .em-hero {
+    order: 1;
+  }
+
+  .linkedin-form-header {
+    background: linear-gradient(135deg, #1a4a8d 0%, #0d3566 100%);
+    padding: 24px 20px;
+    color: white;
+  }
+
+  .linkedin-form-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: white !important;
+    letter-spacing: -0.3px;
+  }
+
+  .linkedin-form-header p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .linkedin-form-body {
+    padding: 24px 20px 28px;
+    background-color: #ffffff;
+  }
+
+  .linkedin-form-wrapper label {
+    display: block;
+    color: #555 !important;
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  /* Inputs con touch targets de 48px mínimo */
+  .linkedin-form-wrapper input,
+  .linkedin-form-wrapper textarea {
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 14px 16px !important;
+    margin-bottom: 14px !important;
+    border-radius: 10px !important;
+    border: 1px solid #c8daea !important;
+    font-size: 16px !important; /* Evita zoom en iOS */
+    background-color: #f7fbff !important;
+    color: #333 !important;
+    font-family: 'Poppins', sans-serif !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    transition: border-color 0.2s, box-shadow 0.2s !important;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .linkedin-form-wrapper textarea {
+    min-height: 88px !important;
+    resize: vertical;
+  }
+
+  .linkedin-form-wrapper input:focus,
+  .linkedin-form-wrapper textarea:focus {
+    border-color: #0698d6 !important;
+    outline: none !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 3px rgba(6, 152, 214, 0.2) !important;
+  }
+
+  body .em-page-wrapper .form-row-double,
+  .em-page-wrapper .form-row-double {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0;
+  }
+
+  .form-row-double .field-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .linkedin-form-wrapper button[type="submit"] {
+    width: 100%;
+    min-height: 52px;
+    padding: 16px 24px;
+    touch-action: manipulation;
+    background: linear-gradient(135deg, #0698d6 0%, #0582b8 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 8px;
+    box-shadow: 0 4px 16px rgba(6, 152, 214, 0.35);
+  }
+
+  .linkedin-form-wrapper button[type="submit"]:active {
+    transform: scale(0.98);
+  }
+
+  .form-security-note {
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+
+  /* MODAL CALENDLY — fullscreen en móvil */
+  .calendly-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: rgba(0,0,0,.9);
+    z-index: 2147483647;
+    align-items: center;
+    justify-content: center;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+
+  .calendly-modal-content {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .calendly-modal-body {
+    padding: 0;
+  }
+
+  /* Refuerzo explícito móvil — por si tema/emulador interfieren */
+  @media (max-width: 768px) {
+    body .em-page-wrapper .em-page-hero,
+    .em-page-wrapper .em-page-hero {
+      display: flex !important;
+      flex-direction: column !important;
+      grid-template-columns: unset !important;
+    }
+    body .em-page-wrapper .form-row-double,
+    .em-page-wrapper .form-row-double {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  /* ============================================
+     DESKTOP — min-width 769px
+  ============================================ */
+  @media (min-width: 769px) {
+    body .em-page-wrapper .em-page-hero,
+    .em-page-wrapper .em-page-hero {
+      padding: 50px 30px;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .em-hero {
+      order: unset;
+    }
+
+    .em-hero-image {
+      max-width: 320px;
+      margin: 0 0 20px;
+    }
+
+    .em-hero-badge {
+      margin-bottom: 20px;
+    }
+
+    .em-hero h1 {
+      font-size: 38px;
+      margin: 0 0 18px;
+    }
+
+    .em-hero .em-hero-intro {
+      font-size: 17px;
+      margin: 18px 0;
+    }
+
+    .em-hero-benefits li {
+      font-size: 15px;
+      padding: 5px 0;
+    }
+
+    .em-hero-trust {
+      font-size: 13px;
+      margin-top: 20px;
+    }
+
+    .linkedin-form-wrapper {
+      max-width: 480px;
+      order: unset;
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(26, 74, 141, 0.18);
+    }
+
+    .linkedin-form-header {
+      background-color: #1a4a8d;
+      padding: 20px 30px;
+    }
+
+    .linkedin-form-body {
+      padding: 28px 30px;
+    }
+
+    .linkedin-form-wrapper input,
+    .linkedin-form-wrapper textarea {
+      min-height: unset !important;
+      padding: 11px 14px !important;
+      margin-bottom: 16px !important;
+      font-size: 15px !important;
+    }
+
+    .linkedin-form-wrapper textarea {
+      min-height: unset !important;
+    }
+
+    body .em-page-wrapper .form-row-double,
+    .em-page-wrapper .form-row-double {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 12px;
+    }
+
+    .linkedin-form-wrapper button[type="submit"] {
+      min-height: unset;
+      padding: 15px;
+      font-size: 17px;
+      background-color: #0698d6;
+      box-shadow: none;
+      margin-top: 0;
+    }
+
+    .linkedin-form-wrapper button[type="submit"]:hover {
+      background-color: #1a4a8d;
+    }
+
+    .form-security-note {
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    .calendly-modal-content {
+      width: 95%;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+    }
+  }
+</style>
+
+<div class="em-page-wrapper">
+<!-- SECCIÓN 1: HERO / INTRO -->
+<div class="em-page-hero">
+  <div class="em-hero">
+    <img class="em-hero-image" src="https://res.cloudinary.com/dqph2qm49/image/upload/v1773267203/SSK/assets/IMG-FORM_bhpunr.png" alt="">
+    <span class="em-hero-badge">📋 Quick Form Before Your Demo</span>
+    <h1>Just a Few Questions Before We Meet</h1>
+    <p class="em-hero-intro">
+      Before scheduling your demo, we'd love to learn a little
+      about you and your team. This helps us tailor the session
+      to what matters most to you.
+    </p>
+    <ul class="em-hero-benefits">
+      <li>Takes less than 2 minutes to complete</li>
+      <li>Helps us prepare a more relevant demo for your team</li>
+      <li>Once submitted, you'll pick a date and time that works for you</li>
+    </ul>
+    <p class="em-hero-trust">🔒 Your information is 100% secure and will never be shared.</p>
+  </div>
+
+  <div class="linkedin-form-wrapper">
+    <div class="linkedin-form-header">
+      <h2>Book Your Free Demo</h2>
+      <p>Fill out the form and pick a time that works for you.</p>
+    </div>
+    <div class="linkedin-form-body">
+      <form id="emailMarketingForm"
+            action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D3h000000Dpfa"
+            method="POST"
+            target="sfSubmitFrame">
+        <input type="hidden" name="oid" value="00D3h000000Dpfa">
+        <input type="hidden" name="retURL" value="http://">
+        <input type="hidden" name="lead_source" value="Email Marketing">
+        <input type="hidden" name="utm_source" value="email">
+        <input type="hidden" name="utm_medium" value="email">
+        <input type="hidden" name="form_source" value="From Email Marketing">
+        <div class="form-row-double">
+          <div class="field-group">
+            <label for="em_first_name">First Name *</label>
+            <input id="em_first_name" name="first_name" type="text" required>
+          </div>
+          <div class="field-group">
+            <label for="em_last_name">Last Name *</label>
+            <input id="em_last_name" name="last_name" type="text" required>
+          </div>
+        </div>
+        <label for="em_title">Title</label>
+        <input id="em_title" name="title" type="text">
+        <label for="em_email">Email *</label>
+        <input id="em_email" name="email" type="email" required>
+        <label for="em_phone">Phone</label>
+        <input id="em_phone" name="phone" type="tel">
+        <label for="em_company">Company</label>
+        <input id="em_company" name="company" type="text">
+        <label for="em_url">Website</label>
+        <input id="em_url" name="url" type="text">
+        <label for="em_employees">Employees</label>
+        <input id="em_employees" name="employees" type="text">
+        <label for="em_salesreps"># Sales Reps</label>
+        <input id="em_salesreps" name="00NTR000004J2F7" type="text">
+        <label for="em_prep">Anything to help prepare for our meeting</label>
+        <input id="em_prep" name="prep_notes" type="text">
+        <label for="em_heard">How did you hear about us</label>
+        <textarea id="em_heard" name="00NTR000004J2YT" rows="3"></textarea>
+        <button type="submit">SCHEDULE MY DEMO →</button>
+        <p class="form-security-note">
+          🔒 Your information is 100% secure and will never be shared.
+        </p>
+      </form>
+      <iframe name="sfSubmitFrame" style="display:none;" title="sf"></iframe>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- MODAL CALENDLY -->
+<div id="calendlyModalEM" class="calendly-modal">
+  <div class="calendly-modal-content">
+    <div class="calendly-modal-header" style="background-color:#1a4a8d; padding:20px 30px; color:white; position:relative; text-align:center;">
+      <button class="calendly-modal-close-em" type="button" style="position:absolute; top:15px; right:15px; background:transparent; border:none; font-size:30px; color:white; cursor:pointer;">&times;</button>
+      <h3 style="margin:0; color:white; font-weight:700;">Schedule your demo</h3>
+      <p style="margin:4px 0 0; color:rgba(255,255,255,0.8); font-size:13px;">
+        Pick a date and time that works best for you
+      </p>
+    </div>
+    <div class="calendly-modal-body">
+      <div id="calendlyInlineEM" style="height:650px;"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+if (!document.querySelector('script[src*="calendly"]')) {
+  var s = document.createElement('script');
+  s.src = 'https://assets.calendly.com/assets/external/widget.js';
+  s.async = true;
+  document.head.appendChild(s);
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("emailMarketingForm");
+  var calendlyModal = document.getElementById("calendlyModalEM");
+  var calendlyClose = document.querySelector(".calendly-modal-close-em");
+  var calendlyInline = document.getElementById("calendlyInlineEM");
+
+  function closeModal() {
+    calendlyModal.style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  calendlyClose.addEventListener("click", closeModal);
+  calendlyModal.addEventListener("click", function (e) {
+    if (e.target === calendlyModal) closeModal();
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var first_name = document.getElementById("em_first_name").value.trim();
+    var last_name = document.getElementById("em_last_name").value.trim();
+    var email = document.getElementById("em_email").value.trim();
+    var company = document.getElementById("em_company").value.trim();
+    var prepNotes = document.getElementById("em_prep").value.trim();
+
+    var fullName = first_name + " " + last_name;
+    var nameWithCompany = company ? fullName + " (" + company + ")" : fullName;
+
+    var calendlyBase = "https://calendly.com/d/ctpn-936-xy4/scorekeeper-for-salesforce-demo-cm";
+    var calendlyUrl = calendlyBase + "?name=" + encodeURIComponent(nameWithCompany) + "&email=" + encodeURIComponent(email) + "&utm_source=email&utm_medium=email";
+
+    form.submit();
+
+    calendlyModal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+    calendlyInline.innerHTML = "";
+
+    setTimeout(function () {
+      if (typeof Calendly !== "undefined" && Calendly.initInlineWidget) {
+        Calendly.initInlineWidget({
+          url: calendlyUrl,
+          parentElement: calendlyInline,
+          prefill: {
+            name: nameWithCompany,
+            email: email,
+            customAnswers: { a1: prepNotes || "" }
+          },
+          utm: { utmSource: "email", utmMedium: "email" }
+        });
+      } else {
+        calendlyInline.innerHTML = '<iframe src="' + calendlyUrl + '" frameborder="0" style="width:100%;height:650px;border:none;"></iframe>';
+      }
+    }, 500);
+  });
+});
+</script>
