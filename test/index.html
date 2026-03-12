@@ -111,21 +111,39 @@
   </div>
   <script>
     (function() {
-      var PASS = '__TEST_PASSWORD__';
       var KEY = 'testAuth';
-      // Siempre mostrar el formulario al entrar en /test/ (no saltar con sesión)
-      document.getElementById('auth-form').addEventListener('submit', function(e) {
+      var form = document.getElementById('auth-form');
+      var err = document.getElementById('error');
+      var formArea = document.getElementById('form-area');
+      var linksArea = document.getElementById('links-area');
+
+      form.addEventListener('submit', function(e) {
         e.preventDefault();
         var pwd = document.getElementById('pwd').value;
-        var err = document.getElementById('error');
-        if (pwd === PASS) {
-          sessionStorage.setItem(KEY, 'true');
-          document.getElementById('form-area').style.display = 'none';
-          document.getElementById('links-area').style.display = 'block';
-          err.classList.remove('visible');
-        } else {
-          err.classList.add('visible');
-        }
+        err.classList.remove('visible');
+        form.querySelector('button').disabled = true;
+
+        fetch('/api/test-auth', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: pwd })
+        })
+          .then(function(res) {
+            if (res.ok) {
+              sessionStorage.setItem(KEY, 'true');
+              formArea.style.display = 'none';
+              linksArea.style.display = 'block';
+            } else {
+              err.classList.add('visible');
+            }
+          })
+          .catch(function() {
+            err.textContent = 'Error de conexión. ¿Estás en el servidor (Vercel o vercel dev)?';
+            err.classList.add('visible');
+          })
+          .finally(function() {
+            form.querySelector('button').disabled = false;
+          });
       });
     })();
   </script>

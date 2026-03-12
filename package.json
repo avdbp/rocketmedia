@@ -2,7 +2,6 @@
   "name": "rocketmedia-portfolio",
   "private": true,
   "scripts": {
-    "build": "node scripts/inject-test-password.js",
-    "prebuild": "echo 'Inyectando variables de entorno...'"
+    "build": "echo 'Static site + API, no build necesario'"
   }
 }
