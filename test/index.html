@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acceso restringido</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f3f4f6;
+      padding: 1rem;
+    }
+    .gate {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      max-width: 360px;
+      width: 100%;
+    }
+    .gate h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.25rem;
+      color: #111;
+    }
+    .gate p {
+      margin: 0 0 1.5rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .gate label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #374151;
+    }
+    .gate input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .gate input:focus {
+      outline: none;
+      border-color: #c51d15;
+      box-shadow: 0 0 0 3px rgba(197, 29, 21, 0.15);
+    }
+    .gate button {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: #c51d15;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .gate button:hover { background: #a01810; }
+    .gate .error {
+      margin-top: 0.75rem;
+      color: #c51d15;
+      font-size: 0.875rem;
+      display: none;
+    }
+    .gate .error.visible { display: block; }
+    .links {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    .links a {
+      display: block;
+      padding: 0.5rem 0;
+      color: #c51d15;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="gate">
+    <div id="form-area">
+      <h1>Zona de pruebas</h1>
+      <p>Introduce la contraseña para acceder.</p>
+      <form id="auth-form">
+        <label for="pwd">Contraseña</label>
+        <input type="password" id="pwd" name="pwd" autocomplete="off" required>
+        <button type="submit">Entrar</button>
+        <p class="error" id="error">Contraseña incorrecta.</p>
+      </form>
+    </div>
+    <div id="links-area" style="display: none;">
+      <h1>Archivos de prueba</h1>
+      <p>Elige un archivo para verlo.</p>
+      <div class="links">
+        <a href="email-marketing-page.html">email-marketing-page.html</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var PASS = '__TEST_PASSWORD__';
+      var KEY = 'testAuth';
+      // Siempre mostrar el formulario al entrar en /test/ (no saltar con sesión)
+      document.getElementById('auth-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var pwd = document.getElementById('pwd').value;
+        var err = document.getElementById('error');
+        if (pwd === PASS) {
+          sessionStorage.setItem(KEY, 'true');
+          document.getElementById('form-area').style.display = 'none';
+          document.getElementById('links-area').style.display = 'block';
+          err.classList.remove('visible');
+        } else {
+          err.classList.add('visible');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
