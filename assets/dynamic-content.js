@@ -53,7 +53,7 @@ const portfolioData = {
     },
     {
       title: "Volta Coffee",
-      description: "<strong>CMS demo</strong> for a specialty coffee roastery in Barcelona. Single origin, small batch. Try the admin panel: click the gear icon at the bottom, then log in with user <strong>admin</strong> and password <strong>volta2024</strong>.",
+      description: "<strong>CMS demo</strong> for a specialty coffee roastery in Barcelona. Try the admin panel: click the gear icon at the bottom, then log in with user <strong>admin</strong> and password <strong>volta2024</strong>.",
       image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1773024596/rocketMedia/sustitution-webp/volta_xsz4dj.webp",
       technologies: ["React.js", "CMS", "Vercel"],
       link: "https://volta-theta.vercel.app/",
