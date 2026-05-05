@@ -8,6 +8,9 @@ const EMAILJS_CONFIG = {
   TEMPLATE_ID: "template_l0nr1y7"        // Template para ti (recibir mensaje)
 };
 
+const lang = window.__portfolioLang || new URLSearchParams(window.location.search).get("lang") || "en";
+const isSpanish = lang === "es";
+
 console.log('📋 EmailJS config loaded:', EMAILJS_CONFIG);
 
 // Notification System
@@ -81,14 +84,17 @@ function setupContactForm() {
     
     // Validate form
     if (!formData.name || !formData.email || !formData.message) {
-      showNotification('Por favor completa todos los campos.', 'info');
+      showNotification(
+        isSpanish ? 'Por favor completa todos los campos.' : 'Please complete all fields.',
+        'info'
+      );
       return;
     }
     
     // Show loading state
     const submitButton = form.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
-    submitButton.textContent = 'Sending...';
+    submitButton.textContent = isSpanish ? 'Enviando...' : 'Sending...';
     submitButton.disabled = true;
     
     // Send email to you (main message only)
@@ -96,17 +102,25 @@ function setupContactForm() {
     emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, {
       user_name: formData.name,
       user_email: formData.email,
-      subject: `Mensaje de ${formData.name} desde la web`,
+      subject: isSpanish
+        ? `Mensaje de ${formData.name} desde la web`
+        : `Message from ${formData.name} via website`,
       message: formData.message
     })
     .then(function(response) {
       console.log('✅ Email sent successfully:', response);
-      showNotification('¡Mensaje enviado exitosamente!', 'success');
+      showNotification(
+        isSpanish ? '¡Mensaje enviado exitosamente!' : 'Message sent successfully!',
+        'success'
+      );
       form.reset();
     })
     .catch(function(error) {
       console.error('❌ Email send failed:', error);
-      showNotification('Error al enviar el mensaje. Inténtalo de nuevo.', 'error');
+      showNotification(
+        isSpanish ? 'Error al enviar el mensaje. Inténtalo de nuevo.' : 'Error sending the message. Please try again.',
+        'error'
+      );
     })
     .finally(function() {
       // Reset button state

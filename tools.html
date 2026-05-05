@@ -980,6 +980,7 @@
         <li><a href="/tools.html" class="nav__link" aria-current="page">Tools</a></li>
         <li><a href="/about.html" class="nav__link">About</a></li>
         <li><a href="/contact.html" class="nav__link">Contact</a></li>
+        <li><a href="#" class="nav__link nav__lang-toggle" id="lang-toggle">ES</a></li>
       </ul>
       
       <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
@@ -1422,6 +1423,8 @@
     </div>
   </div>
 
+  <script src="/assets/language-switcher.js"></script>
+
   <!-- JavaScript -->
   <script>
     // Mobile Navigation Toggle
@@ -1563,11 +1566,18 @@
       // Typewriter Effect
       const typewriterElement = document.getElementById('typewriter');
       if (typewriterElement) {
-        const texts = [
-          'Creating amazing web experiences...',
-          'Building modern interfaces...',
-          'Crafting beautiful designs...'
-        ];
+        const lang = window.__portfolioLang || new URLSearchParams(window.location.search).get('lang') || 'en';
+        const texts = lang === 'es'
+          ? [
+              'Creando experiencias web increíbles...',
+              'Construyendo interfaces modernas...',
+              'Diseñando propuestas visuales atractivas...'
+            ]
+          : [
+              'Creating amazing web experiences...',
+              'Building modern interfaces...',
+              'Crafting beautiful designs...'
+            ];
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;

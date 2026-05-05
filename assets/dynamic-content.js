@@ -1,3 +1,72 @@
+const currentLang = window.__portfolioLang || new URLSearchParams(window.location.search).get("lang") || "en";
+const isSpanish = currentLang === "es";
+
+const translations = {
+  viewProject: isSpanish ? "Ver Proyecto" : "View Project",
+  viewCode: isSpanish ? "Ver Código" : "View Code",
+  teamRole: {
+    "Web Developer": "Desarrollador Web",
+    "UI/UX Designer": "Diseñadora UI/UX"
+  },
+  teamBio: {
+    "Full-stack developer with 5+ years of experience in modern web technologies. Specializes in React.js, Node.js, and cloud deployment.":
+      "Desarrollador full stack con más de 5 años de experiencia en tecnologías web modernas. Especializado en React.js, Node.js y despliegue en la nube.",
+    "Creative designer focused on user experience and modern design principles. Expert in Figma, Adobe Creative Suite, and design systems.":
+      "Diseñadora creativa enfocada en experiencia de usuario y principios de diseño moderno. Experta en Figma, Adobe Creative Suite y sistemas de diseño."
+  },
+  process: {
+    Discovery: "Descubrimiento",
+    Planning: "Planificación",
+    Design: "Diseño",
+    Development: "Desarrollo",
+    Testing: "Pruebas",
+    Launch: "Lanzamiento",
+    "We start by understanding your business goals, target audience, and project requirements.":
+      "Comenzamos entendiendo tus objetivos de negocio, tu audiencia y los requisitos del proyecto.",
+    "We create a detailed project plan, wireframes, and technical specifications.":
+      "Creamos un plan detallado del proyecto, wireframes y especificaciones técnicas.",
+    "Our designers create beautiful, user-centered designs that align with your brand.":
+      "Nuestros diseñadores crean propuestas atractivas, centradas en el usuario y alineadas con tu marca.",
+    "We build your website using modern technologies and best practices.":
+      "Desarrollamos tu sitio con tecnologías modernas y buenas prácticas.",
+    "We thoroughly test your website across all devices and browsers.":
+      "Probamos tu sitio a fondo en todos los dispositivos y navegadores.",
+    "We deploy your website and provide ongoing support and maintenance.":
+      "Publicamos tu sitio y brindamos soporte y mantenimiento continuo."
+  }
+};
+
+const projectDescriptionEs = {
+  SalesScoreKeeper:
+    "Aplicación web para seguimiento de ventas y comisiones. Sistema completo de gestión comercial con métricas y reportes. Diseño de <a href='https://estefanialombardo.com/' target='_blank' rel='noopener noreferrer'>Estefania Lombardo</a> y desarrollo de Rocketmedia.",
+  "Explorer Tours Bonaire":
+    "Sitio web para tours guiados en Bonaire. Experiencias relajadas en grupos pequeños para mostrar la belleza natural, historia y cultura de la isla.",
+  "Floristería Roquetes":
+    "<strong>Demo e-commerce</strong> para una floristería (flores y plantas). Usa IA para describir características y cuidados de cada planta; pruébalo en la página del producto Ficus.",
+  "305 Expo":
+    "Consorcio de empresas especializadas en Miami que ofrece soluciones completas en comunicación visual, exhibiciones y entornos comerciales, integrando todo el proceso internamente.",
+  "Precision Property Management":
+    "Sitio completo para gestión de propiedades en Florida. Diseño profesional y desarrollo full stack con foco en experiencia de usuario y funcionalidades inmobiliarias.",
+  "Volta Coffee":
+    "<strong>Demo CMS</strong> para una cafetería de especialidad en Barcelona. Prueba el panel de administración: haz clic en el engranaje inferior e inicia sesión con usuario <strong>admin</strong> y contraseña <strong>volta2024</strong>.",
+  "MindCare AI App":
+    "MindCare AI es una app web de bienestar emocional que combina seguimiento de estado de ánimo, actividades de mindfulness y un asistente de IA con enfoque terapéutico.",
+  "Roi Calculator App":
+    "Aplicación web para calcular retorno de inversión. Interfaz intuitiva con gráficos interactivos y cálculos financieros avanzados.",
+  "La Wash Londres 81":
+    "Sitio web para lavandería y tintorería en Barcelona. Diseño elegante y funcional con sistema de reservas online e información de servicios.",
+  "Metro X USA":
+    "Plataforma web para empresa de transporte y logística. Diseño moderno y responsive con funcionalidades de seguimiento y gestión de servicios.",
+  "Woodrock Design":
+    "Sitio de interiores personalizados en madera y piedra para cocinas, baños, closets y más. Diseños a medida para elevar espacios con elegancia natural.",
+  "SSK Email Template in HTML":
+    "Plantilla de email en HTML para SSK. Diseño responsive compatible con múltiples clientes de correo. Diseño de <a href='https://estefanialombardo.com/' target='_blank' rel='noopener noreferrer'>Estefania Lombardo</a> y desarrollo de Rocketmedia.",
+  "SSK Mail Signature":
+    "Plantilla de firma profesional para el equipo de SSK. Diseño de <a href='https://estefanialombardo.com/' target='_blank' rel='noopener noreferrer'>Estefania Lombardo</a> y desarrollo de Rocketmedia.",
+  "Restoration Maintenance Email Template":
+    "Plantilla de email en HTML para empresa de mantenimiento. Diseño profesional y funcional para campañas de email marketing."
+};
+
 // Portfolio Data
 const portfolioData = {
   projects: [
@@ -223,13 +292,13 @@ function renderProjects(filter) {
       </div>
       <div class="project-content">
         <h3 class="project-title">${project.title}</h3>
-        <p class="project-description">${project.description}</p>
+        <p class="project-description">${isSpanish ? (projectDescriptionEs[project.title] || project.description) : project.description}</p>
         <div class="project-tags">
           ${project.technologies.map(tech => `<span class="tag">${tech}</span>`).join('')}
         </div>
         <div class="project-links">
-          <a href="${project.link}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View Project</a>
-          ${project.repo ? `<a href="${project.repo}" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">View Code</a>` : ''}
+          <a href="${project.link}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">${translations.viewProject}</a>
+          ${project.repo ? `<a href="${project.repo}" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">${translations.viewCode}</a>` : ''}
         </div>
       </div>
     </div>`;
@@ -241,13 +310,13 @@ function renderProjects(filter) {
       </div>
       <div class="project-content">
         <h3 class="project-title">${project.title}</h3>
-        <p class="project-description">${project.description}</p>
+        <p class="project-description">${isSpanish ? (projectDescriptionEs[project.title] || project.description) : project.description}</p>
         <div class="project-tags">
           ${project.technologies.map(tech => `<span class="tag">${tech}</span>`).join('')}
         </div>
         <div class="project-links">
-          <a href="${project.link}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View Project</a>
-          ${project.repo ? `<a href="${project.repo}" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">View Code</a>` : ''}
+          <a href="${project.link}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">${translations.viewProject}</a>
+          ${project.repo ? `<a href="${project.repo}" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">${translations.viewCode}</a>` : ''}
         </div>
       </div>
     </div>`;
@@ -287,8 +356,8 @@ function renderTeam() {
         </div>
         <div class="member-content">
           <h3 class="team-member__name">${member.name}</h3>
-          <p class="team-member__role">${member.role}</p>
-          <p class="team-member__bio">${member.bio}</p>
+          <p class="team-member__role">${isSpanish ? (translations.teamRole[member.role] || member.role) : member.role}</p>
+          <p class="team-member__bio">${isSpanish ? (translations.teamBio[member.bio] || member.bio) : member.bio}</p>
           <div class="team-member__skills">
             ${member.skills.map(skill => `<span class="team-member__skill">${skill}</span>`).join('')}
           </div>
@@ -331,8 +400,8 @@ function renderProcess() {
   processGrid.innerHTML = portfolioData.process.map(step => `
     <div class="process-step">
       <div class="process-step__number">${step.step}</div>
-      <h3 class="process-step__title">${step.title}</h3>
-      <p class="process-step__description">${step.description}</p>
+      <h3 class="process-step__title">${isSpanish ? (translations.process[step.title] || step.title) : step.title}</h3>
+      <p class="process-step__description">${isSpanish ? (translations.process[step.description] || step.description) : step.description}</p>
     </div>
   `).join('');
   
