@@ -49,6 +49,10 @@ const projectDescriptionEs = {
     "Sitio completo para gestión de propiedades en Florida. Diseño profesional y desarrollo full stack con foco en experiencia de usuario y funcionalidades inmobiliarias.",
   "Volta Coffee":
     "<strong>Demo CMS</strong> para una cafetería de especialidad en Barcelona. Prueba el panel de administración: haz clic en el engranaje inferior e inicia sesión con usuario <strong>admin</strong> y contraseña <strong>volta2024</strong>.",
+  "Lead Form Demo":
+    "<strong>Demo de captación de leads</strong> para registrar datos de contacto y negocio, y generar al instante una ficha de lead lista para flujos de CRM.",
+  "Image Converter App":
+    "<strong>Convertidor de imágenes</strong> para transformar archivos entre WebP, PNG y JPG, con control de calidad, renombrado y opciones de redimensionado.",
   "MindCare AI App":
     "MindCare AI es una app web de bienestar emocional que combina seguimiento de estado de ánimo, actividades de mindfulness y un asistente de IA con enfoque terapéutico.",
   "Roi Calculator App":
@@ -129,6 +133,26 @@ const portfolioData = {
       repo: null,
       featured: false,
       categories: ["website", "fullstack"]
+    },
+    {
+      title: "Lead Form Demo",
+      description: "<strong>Lead generation demo</strong> to capture contact and business details, and instantly create a branded lead card ready for CRM workflows.",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1777980129/rocketMedia/sustitution-webp/demo-form_qnwesq.png",
+      technologies: ["HTML5", "Lead Generation", "PDF"],
+      link: "https://demo-lead-form.vercel.app/",
+      repo: null,
+      featured: false,
+      categories: ["website", "app", "fullstack"]
+    },
+    {
+      title: "Image Converter App",
+      description: "<strong>Image converter app</strong> to convert files between WebP, PNG, and JPG with quality controls, renaming tools, and resizing options.",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1777981251/rocketMedia/sustitution-webp/converter-imgs_qzf436.webp",
+      technologies: ["HTML5", "Image Conversion", "WebP", "PNG", "JPG"],
+      link: "https://img-converter-app-24vj.vercel.app/",
+      repo: null,
+      featured: false,
+      categories: ["website", "app"]
     },
     {
       title: "MindCare AI App",
