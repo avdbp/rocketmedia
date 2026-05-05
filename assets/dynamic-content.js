@@ -53,6 +53,8 @@ const projectDescriptionEs = {
     "<strong>Demo de captación de leads</strong> para registrar datos de contacto y negocio, y generar al instante una ficha de lead lista para flujos de CRM.",
   "Image Converter App":
     "<strong>Convertidor de imágenes</strong> para transformar archivos entre WebP, PNG y JPG, con control de calidad, renombrado y opciones de redimensionado.",
+  "AVDB Portfolio":
+    "Portafolio personal de <strong>Alejandro van den Bussche Paris</strong> orientado a servicios Full Stack, proyectos destacados y contacto profesional.",
   "MindCare AI App":
     "MindCare AI es una app web de bienestar emocional que combina seguimiento de estado de ánimo, actividades de mindfulness y un asistente de IA con enfoque terapéutico.",
   "Roi Calculator App":
@@ -153,6 +155,16 @@ const portfolioData = {
       repo: null,
       featured: false,
       categories: ["website", "app", "other"]
+    },
+    {
+      title: "AVDB Portfolio",
+      description: "Personal portfolio for <strong>Alejandro van den Bussche Paris</strong>, showcasing full stack services, selected projects, and direct hiring contact.",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1777985907/rocketMedia/sustitution-webp/portfolio-avdb_b8gru9.png",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Portfolio"],
+      link: "https://avdb-portfolio.vercel.app/",
+      repo: null,
+      featured: false,
+      categories: ["website", "other"]
     },
     {
       title: "MindCare AI App",
