@@ -66,6 +66,13 @@
     setText(".nav__menu a[href='/about.html']", isSpanish ? "Nosotros" : "About");
     setText(".nav__menu a[href='/contact.html']", isSpanish ? "Contacto" : "Contact");
 
+    setText(
+      ".footer__description",
+      isSpanish
+        ? "Estudio de desarrollo y diseño web creando sitios modernos y responsivos."
+        : "Web development and design studio creating modern, responsive websites."
+    );
+
     setText(".footer__menu a[href='/']", isSpanish ? "Inicio" : "Home");
     setText(".footer__menu a[href='/projects.html']", isSpanish ? "Proyectos" : "Projects");
     setText(".footer__menu a[href='/tools.html']", isSpanish ? "Herramientas" : "Tools");
