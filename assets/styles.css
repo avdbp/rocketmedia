@@ -1847,6 +1847,18 @@ a:hover {
   .project-card--wide .project-content {
     padding: 1.5rem;
   }
+
+  /* Wide cards: en mobile, botones en columna para evitar overflow */
+  .project-card--wide .project-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-card--wide .project-links .btn {
+    flex: 0 0 auto;
+    min-width: 0;
+    width: 100%;
+  }
   
   .footer__logo {
     height: 42px;
