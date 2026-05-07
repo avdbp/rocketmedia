@@ -70,7 +70,9 @@ const projectDescriptionEs = {
   "SSK Mail Signature":
     "Plantilla de firma profesional para el equipo de SSK. Diseño de <a href='https://estefanialombardo.com/' target='_blank' rel='noopener noreferrer'>Estefania Lombardo</a> y desarrollo de Rocketmedia.",
   "Restoration Maintenance Email Template":
-    "Plantilla de email en HTML para empresa de mantenimiento. Diseño profesional y funcional para campañas de email marketing."
+    "Plantilla de email en HTML para empresa de mantenimiento. Diseño profesional y funcional para campañas de email marketing.",
+  "Bookly Demo":
+    "Demo de reservas para spa y masajes: selección de servicio, horario y confirmación rápida. Ideal para negocios que quieren convertir visitas en turnos con un flujo simple y móvil-first."
 };
 
 // Portfolio Data
@@ -247,6 +249,16 @@ const portfolioData = {
       repo: "https://github.com/avdbp/restomain-email",
       featured: false,
       categories: ["other"]
+    },
+    {
+      title: "Bookly Demo",
+      description: "Spa & massage booking demo with a fast, mobile-first flow to pick a service, time slot, and confirm in minutes.",
+      image: "https://res.cloudinary.com/dqph2qm49/image/upload/v1778148297/rocketMedia/sustitution-webp/bookly-demo_z4vzvi.webp",
+      technologies: ["React.js", "Booking", "Vercel"],
+      link: "https://bookly-demo.vercel.app/",
+      repo: null,
+      featured: false,
+      categories: ["app", "fullstack"]
     }
     
   ],
