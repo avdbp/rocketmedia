@@ -258,6 +258,7 @@ const portfolioData = {
       link: "https://bookly-demo.vercel.app/",
       repo: null,
       featured: false,
+      wideCard: true,
       categories: ["app", "fullstack"]
     }
     
