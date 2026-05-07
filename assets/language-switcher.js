@@ -1,7 +1,7 @@
 (() => {
   const supportedLangs = ["en", "es"];
   const langParam = new URLSearchParams(window.location.search).get("lang");
-  const currentLang = supportedLangs.includes(langParam) ? langParam : "en";
+  const currentLang = supportedLangs.includes(langParam) ? langParam : "es";
   const isSpanish = currentLang === "es";
   const path = window.location.pathname;
 

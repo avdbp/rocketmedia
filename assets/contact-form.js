@@ -8,7 +8,7 @@ const EMAILJS_CONFIG = {
   TEMPLATE_ID: "template_l0nr1y7"        // Template para ti (recibir mensaje)
 };
 
-const lang = window.__portfolioLang || new URLSearchParams(window.location.search).get("lang") || "en";
+const lang = window.__portfolioLang || new URLSearchParams(window.location.search).get("lang") || "es";
 const isSpanish = lang === "es";
 
 console.log('📋 EmailJS config loaded:', EMAILJS_CONFIG);

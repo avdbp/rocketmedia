@@ -1,4 +1,4 @@
-const currentLang = window.__portfolioLang || new URLSearchParams(window.location.search).get("lang") || "en";
+const currentLang = window.__portfolioLang || new URLSearchParams(window.location.search).get("lang") || "es";
 const isSpanish = currentLang === "es";
 
 const translations = {
