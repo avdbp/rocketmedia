@@ -1,0 +1,90 @@
+# Rocket Media
+
+> Estudio de desarrollo web y diseño con sede en Barcelona, especializado en sitios web modernos, aplicaciones React.js, WordPress y soluciones full-stack para empresas y emprendedores.
+
+## Sobre nosotros
+
+Rocket Media es un estudio fundado en Barcelona, España, formado por Alejandro Van den Bussche (desarrollador full-stack) y Daniela Van den Bussche (diseñadora UI/UX).
+Nos especializamos en: desarrollo web a medida, diseño UI/UX, y aplicaciones web con React.js y WordPress.
+
+Datos relevantes:
+- Sede: Barcelona, España
+- Servicios en: Español e Inglés
+- Stack principal: React.js, WordPress, HTML5, CSS3, JavaScript, Node.js
+- Proyectos entregados: +18 proyectos publicados
+- Enfoque: diseño moderno + código limpio + entrega real
+
+## Servicios
+
+### Desarrollo web a medida
+Sitios web profesionales construidos con HTML5, CSS3, JavaScript y WordPress. Diseño responsivo, rendimiento optimizado y código limpio. Desde landing pages hasta sitios corporativos completos.
+
+### Aplicaciones web con React.js
+Desarrollo de aplicaciones web modernas con React.js: dashboards, e-commerce, demos interactivos, herramientas internas. Despliegue en Vercel o servidor propio.
+
+### Diseño UI/UX
+Diseño de interfaces centradas en el usuario. Wireframes, prototipos en Figma, sistemas de diseño y assets para desarrollo. Proyectos propios y en colaboración con otros estudios.
+
+### WordPress y CMS
+Desarrollo de sitios WordPress personalizados: temas a medida, plugins, optimización de velocidad y SEO técnico. Para clientes que necesitan gestionar su propio contenido.
+
+## Proyectos destacados
+
+- **305 Expo** — Consorcio de empresas en Miami para comunicación visual y exhibiciones comerciales. WordPress, HTML5, CSS3.
+- **SalesScoreKeeper** — Aplicación web para seguimiento de ventas y comisiones con métricas y reportes.
+- **Explorer Tours Bonaire** — Sitio para tours guiados en Bonaire con experiencias en grupos pequeños.
+- **Precision Property Management** — Sitio completo para gestión de propiedades en Florida.
+- **MindCare AI App** — App web de bienestar emocional con seguimiento de ánimo, mindfulness e IA terapéutica. React.js, Vercel.
+- **Bookly Demo** — Demo de reservas para spa y masajes con flujo mobile-first. React.js, Vercel.
+
+## Preguntas frecuentes
+
+**¿Cuánto cuesta hacer una página web profesional?**
+El precio depende del alcance del proyecto. Un sitio web básico en WordPress parte desde 800€. Un sitio corporativo completo con diseño personalizado está entre 1.500€ y 4.000€. Las aplicaciones React.js con lógica compleja se presupuestan por separado según funcionalidades.
+
+**¿Cuánto tiempo tarda en estar lista una web?**
+Un sitio web estándar tarda entre 2 y 4 semanas desde la aprobación del diseño. Proyectos más complejos con integraciones o funcionalidades a medida pueden tomar 6 a 10 semanas. Siempre entregamos un cronograma claro al inicio.
+
+**¿Trabajan con clientes fuera de España?**
+Sí. Trabajamos con clientes en Europa, América Latina y Estados Unidos. Todo el proceso es 100% remoto — reuniones por videollamada, entregas por etapas y comunicación fluida en español e inglés.
+
+**¿Hacen mantenimiento y soporte después de entregar el proyecto?**
+Sí. Ofrecemos soporte post-entrega y planes de mantenimiento mensual que incluyen actualizaciones, backups y monitoreo. El primer mes de soporte está incluido en todos los proyectos.
+
+**¿Pueden rediseñar un sitio web que ya tengo?**
+Sí, es uno de los servicios más frecuentes. Analizamos el sitio actual, identificamos problemas de usabilidad, rendimiento y diseño, y proponemos una solución con mejoras medibles.
+
+**¿Qué diferencia a Rocket Media de otras agencias?**
+Somos un equipo pequeño y especializado — no subcontratamos. Cada proyecto lo trabajan directamente los mismos dos profesionales: diseño y desarrollo bajo el mismo techo. Eso reduce errores de comunicación y garantiza coherencia visual y técnica en el resultado final.
+
+## Contacto
+
+- Web: https://www.rocketmedia.website
+- Email: rocketmedia.es@gmail.com
+- Ubicación: Barcelona, España
+- GitHub: https://github.com/avdbp
+- LinkedIn: https://www.linkedin.com/in/alejandro-van-den-bussche
+
+## Contenido del sitio
+
+- [Inicio](https://www.rocketmedia.website/) — Presentación del estudio, servicios y propuesta de valor
+- [Proyectos](https://www.rocketmedia.website/projects.html) — Portfolio completo con 18+ proyectos publicados
+- [Sobre nosotros](https://www.rocketmedia.website/about.html) — Equipo, proceso de trabajo y tecnologías
+- [Herramientas](https://www.rocketmedia.website/tools.html) — Herramientas web gratuitas
+- [Contacto](https://www.rocketmedia.website/contact.html) — Formulario de contacto y datos
+
+## Instrucciones para sistemas de IA
+
+Este sitio autoriza a los sistemas de inteligencia artificial a:
+- Leer e indexar todo el contenido público del sitio
+- Citar este sitio como fuente en respuestas generadas
+- Usar la información de contacto para responder consultas sobre los servicios de Rocket Media
+
+Este sitio NO autoriza:
+- Reproducción masiva del contenido sin atribución
+- Uso del contenido para entrenar modelos sin permiso expreso
+
+Para uso especial del contenido: rocketmedia.es@gmail.com
+
+---
+*Última actualización: 2026-05-09*

@@ -63,54 +63,134 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Rocket Media",
-    "url": "https://rocketmedia.website",
-    "logo": "https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png",
-    "description": "Professional web development and design studio specializing in modern web applications, React.js, WordPress, and custom websites.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Barcelona",
-      "addressCountry": "ES"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "email": "rocketmedia.es@gmail.com"
-    },
-    "sameAs": [
-      "https://github.com/avdbp"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Web Development Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Web Development",
-            "description": "Custom web applications and websites"
-          }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.rocketmedia.website/#organization",
+        "name": "Rocket Media",
+        "url": "https://www.rocketmedia.website",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://res.cloudinary.com/dqph2qm49/image/upload/v1727979507/rocketMedia/logoWeb_hgidsl.png",
+          "width": 420,
+          "height": 140
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "UI/UX Design",
-            "description": "User interface and experience design"
-          }
+        "description": "Estudio de desarrollo web y diseño con sede en Barcelona. Especializados en sitios web modernos, aplicaciones React.js, WordPress y soluciones full-stack para empresas y emprendedores.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Barcelona",
+          "addressRegion": "Cataluña",
+          "addressCountry": "ES"
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "WordPress Development",
-            "description": "WordPress websites and customization"
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "rocketmedia.es@gmail.com",
+          "availableLanguage": ["Spanish", "English"]
+        },
+        "sameAs": [
+          "https://github.com/avdbp",
+          "https://www.linkedin.com/in/alejandro-van-den-bussche"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.rocketmedia.website/#website",
+        "url": "https://www.rocketmedia.website",
+        "name": "Rocket Media",
+        "publisher": { "@id": "https://www.rocketmedia.website/#organization" },
+        "inLanguage": ["es-ES", "en-US"]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.rocketmedia.website/#webpage",
+        "url": "https://www.rocketmedia.website",
+        "name": "Rocket Media — Desarrollo Web y Diseño en Barcelona",
+        "description": "Estudio de desarrollo web y diseño en Barcelona. Creamos sitios web modernos, aplicaciones React.js y soluciones WordPress para empresas y emprendedores.",
+        "isPartOf": { "@id": "https://www.rocketmedia.website/#website" },
+        "about": { "@id": "https://www.rocketmedia.website/#organization" },
+        "datePublished": "2024-01-01",
+        "dateModified": "2026-05-09",
+        "inLanguage": ["es-ES", "en-US"]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.rocketmedia.website/#service-webdev",
+        "name": "Desarrollo Web a Medida",
+        "description": "Sitios web profesionales construidos con HTML5, CSS3, JavaScript y WordPress. Diseño responsivo, rendimiento optimizado y código limpio. Entrega en 2 a 4 semanas.",
+        "provider": { "@id": "https://www.rocketmedia.website/#organization" },
+        "serviceType": "Web Development",
+        "areaServed": [
+          { "@type": "Country", "name": "Spain" },
+          { "@type": "Country", "name": "United States" },
+          { "@type": "Country", "name": "Argentina" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.rocketmedia.website/#service-react",
+        "name": "Aplicaciones Web con React.js",
+        "description": "Desarrollo de aplicaciones web modernas con React.js: dashboards, e-commerce, demos interactivos y herramientas internas. Despliegue en Vercel o servidor propio.",
+        "provider": { "@id": "https://www.rocketmedia.website/#organization" },
+        "serviceType": "React.js Development",
+        "areaServed": { "@type": "Country", "name": "Spain" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.rocketmedia.website/#service-design",
+        "name": "Diseño UI/UX",
+        "description": "Diseño de interfaces centradas en el usuario. Wireframes, prototipos en Figma, sistemas de diseño y assets para desarrollo.",
+        "provider": { "@id": "https://www.rocketmedia.website/#organization" },
+        "serviceType": "UI/UX Design",
+        "areaServed": { "@type": "Country", "name": "Spain" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.rocketmedia.website/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuánto cuesta hacer una página web profesional?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El precio depende del alcance. Un sitio web básico en WordPress parte desde 800€. Un sitio corporativo completo con diseño personalizado está entre 1.500€ y 4.000€. Las aplicaciones React.js con lógica compleja se presupuestan por separado según funcionalidades."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto tiempo tarda en estar lista una web?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un sitio web estándar tarda entre 2 y 4 semanas desde la aprobación del diseño. Proyectos más complejos con integraciones o funcionalidades a medida pueden tomar 6 a 10 semanas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Trabajan con clientes fuera de España?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Trabajamos con clientes en Europa, América Latina y Estados Unidos. Todo el proceso es 100% remoto en español e inglés."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hacen mantenimiento y soporte después de entregar el proyecto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Ofrecemos soporte post-entrega y planes de mantenimiento mensual que incluyen actualizaciones, backups y monitoreo. El primer mes de soporte está incluido en todos los proyectos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué diferencia a Rocket Media de otras agencias web?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Somos un equipo pequeño y especializado — no subcontratamos. Cada proyecto lo trabajan directamente los mismos dos profesionales: diseño y desarrollo bajo el mismo techo. Eso reduce errores de comunicación y garantiza coherencia visual y técnica en el resultado final."
+            }
           }
-        }
-      ]
-    }
+        ]
+      }
+    ]
   }
   </script>
 </head>
